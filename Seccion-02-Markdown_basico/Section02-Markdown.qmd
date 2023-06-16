@@ -233,8 +233,20 @@ Incluir un video de YouTube
 
 Introducir las siguientes ecuaciones:
 
-Volumen de una esfera (código *inline:* )
+-   Volumen de una esfera
 
-Resolución ecuación de segundo grado
+$$
+V_{esfera} = \frac{4}{3} \cdot \pi \cdot r^3
+$$
 
-Función Gamma:
+-   Función Gamma
+
+$$
+\Gamma (x) = \int^{\infty}_{0} t^{x -1} e^{-t} \textbf{dt}
+$$
+
+-   Ecuación que dependa del valor de **x** e **y**
+
+$$
+w = \alpha \cdot `r round(x*0.4834, 1)` + \beta \cdot `r y`
+$$
