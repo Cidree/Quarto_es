@@ -79,3 +79,162 @@ sum2(x, y)
 ```
 
 Una práctica muy buena es crear los fragmentos de código utilizando el atajo de teclado CTRL + ALT + I.
+
+## Elementos visuales en Markdown
+
+En esta lección vamos a ver:
+
+-   Listas
+
+-   Enlaces
+
+-   Imágenes
+
+-   Gráficos de R
+
+-   Tablas
+
+-   Vídeos
+
+### Listas
+
+Existen dos tipos de listas:
+
+Desordenadas: utilizan símbolos.
+
+Ordenadas: utilizan elementos que llevan un orden (números, letras).
+
+Una lista desordenada puede ser la siguiente:
+
+-   Curso 1:
+
+    -   Física
+
+        -   Mecánica
+
+        -   Física cuántica
+
+    -   Matemáticas
+
+    -   Álgebra
+
+    -   Geometría
+
+    -   Estadística
+
+-   Curso 2:
+
+    -   Dendrometría
+
+    -   Hidráulica
+
+La misma lista de forma ordenada:
+
+1.  Curso 1:
+
+    i.  Física
+
+        A.  Mecánica
+
+        B.  Física cuántica
+
+    ii. Matemáticas
+
+    iii. Álgebra
+
+    iv. Geometría
+
+    v.  Estadística
+
+2.  Curso 2:
+
+    i.  Dendrometría
+
+    ii. Hidráulica
+
+### Enlaces
+
+Enlace a Quarto: https://quarto.org/
+
+<https://quarto.org/>
+
+<https://quarto.org/>
+
+<https://quarto.org/>
+
+Enlace a Quarto con etiqueta:
+
+[Quarto](https://quarto.org/ "link a quarto")
+
+### Imágenes
+
+Incluir imagen del logo de Quarto:
+
+![](Figuras/logoQuarto.png)
+
+Incluir imagen del logo de Quarto con enlace a la web:
+
+[![](Figuras/logoQuarto.png)](https://quarto.org/)
+
+Incluir imagen de Quarto alineada a la derecha con anchura 30%:
+
+![](Figuras/logoQuarto.png){width="30%" fig-align="right"}
+
+Incluir logo de Quarto y logo de Posit en 2 columnas, alineados por la parte inferior:
+
+::: {layout-ncol="2" layout-valign="bottom"}
+![Logo de Quarto](Figuras/logoQuarto.png)
+
+![Logo de Posit](Figuras/posit.png)
+:::
+
+Incluir logo de posit a través del paquete knitr:
+
+```{r}
+knitr::include_graphics('Figuras/logoQuarto.png')
+```
+
+### Gráficos
+
+Incluir un gráfico de ggplot2:
+
+```{r}
+library(ggplot2)
+data(iris)
+
+ggplot(iris, aes(Petal.Length, Sepal.Length, color = Species)) +
+  geom_point()
+```
+
+### Tablas
+
+Incluir una tabla no interactiva del dataset iris:
+
+```{r}
+library(flextable)
+
+flextable(iris)
+```
+
+Incluir una tabla interactiva del dataset iris:
+
+```{r}
+library(DT)
+datatable(iris)
+```
+
+### Vídeos
+
+Incluir un video de YouTube
+
+{{< video https://www.youtube.com/watch?v=l6rS8Dv5g-8 >}}
+
+## Ecuaciones
+
+Introducir las siguientes ecuaciones:
+
+Volumen de una esfera (código *inline:* )
+
+Resolución ecuación de segundo grado
+
+Función Gamma:
