@@ -250,3 +250,57 @@ $$
 $$
 w = \alpha \cdot `r round(x*0.4834, 1)` + \beta \cdot `r y`
 $$
+
+## Extra
+
+En esta lección vamos a ver:
+
+-   Line block
+
+-   Blockquote
+
+-   Tablas de Quarto
+
+-   Emojis y símbolos
+
+### Line block
+
+Pino
+
+Árbol perteneciente al género Pinus, que forma parte de la familia de las Pináceas.
+
+Los pinos son conocidos por su forma de cono y su follaje perenne en forma de agujas.
+
+| Pino
+|       Árbol perteneciente al género Pinus, que forma parte de la familia de las Pináceas.
+|       Los pinos son conocidos por su forma de cono y su follaje perenne en forma de agujas.
+
+### Blockquote
+
+Definición de pino:
+
+> Árbol perteneciente al género Pinus, que forma parte de la familia de las Pináceas. Los pinos son conocidos por su forma de cono y su follaje perenne en forma de agujas.
+
+### Tablas de Quarto
+
+| Especies 🌲       | Acículas 🍃 | Tamaño de piña 🍍 |
+|-------------------|:-----------:|-------------------|
+| Pinus pinaster    |      2      | Grande            |
+| Pinus canariensis |      3      | Pequeña           |
+| Pinus pinea       |      2      | Grande            |
+
+: Especies de pinos
+
+### Emojis y símbolos
+
+Adrián
+
+Pedro
+
+Paco
+
+\
+
+Laura
+
+Miriam
