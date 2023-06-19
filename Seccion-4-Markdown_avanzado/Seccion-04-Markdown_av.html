@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.340">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Adrián Cidre González">
+
+<title>Prueba</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="Seccion-04-Markdown_av_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Seccion-04-Markdown_av_files/libs/quarto-html/quarto.js"></script>
+<script src="Seccion-04-Markdown_av_files/libs/quarto-html/popper.min.js"></script>
+<script src="Seccion-04-Markdown_av_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Seccion-04-Markdown_av_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Seccion-04-Markdown_av_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Seccion-04-Markdown_av_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Seccion-04-Markdown_av_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Seccion-04-Markdown_av_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Seccion-04-Markdown_av_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="Seccion-04-Markdown_av_files/libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="Seccion-04-Markdown_av_files/libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
+<link href="Seccion-04-Markdown_av_files/libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="Seccion-04-Markdown_av_files/libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<style>
+
+      .quarto-title-block .quarto-title-banner h1,
+      .quarto-title-block .quarto-title-banner h2,
+      .quarto-title-block .quarto-title-banner h3,
+      .quarto-title-block .quarto-title-banner h4,
+      .quarto-title-block .quarto-title-banner h5,
+      .quarto-title-block .quarto-title-banner h6
+      {
+        color: #81F3D6;
+      }
+
+      .quarto-title-block .quarto-title-banner {
+        color: #81F3D6;
+background: #000A5F;
+      }
+</style>
+
+
+</head>
+
+<body>
+
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Prueba</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Autor/a</div>
+      <div class="quarto-title-meta-contents">
+               <p>Adrián Cidre González </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Fecha de publicación</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">19 de junio de 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#introducción-a-la-sección" id="toc-introducción-a-la-sección" class="nav-link active" data-scroll-target="#introducción-a-la-sección"><span class="header-section-number">1</span> Introducción a la sección 👀</a>
+  <ul class="collapse">
+  <li><a href="#citas" id="toc-citas" class="nav-link" data-scroll-target="#citas"><span class="header-section-number">1.1</span> Citas</a></li>
+  <li><a href="#shortcode" id="toc-shortcode" class="nav-link" data-scroll-target="#shortcode"><span class="header-section-number">1.2</span> Shortcode</a>
+  <ul class="collapse">
+  <li><a href="#meta" id="toc-meta" class="nav-link" data-scroll-target="#meta"><span class="header-section-number">1.2.1</span> Meta</a></li>
+  <li><a href="#pagebreak" id="toc-pagebreak" class="nav-link" data-scroll-target="#pagebreak"><span class="header-section-number">1.2.2</span> Pagebreak</a></li>
+  <li><a href="#kbd" id="toc-kbd" class="nav-link" data-scroll-target="#kbd"><span class="header-section-number">1.2.3</span> Kbd</a></li>
+  <li><a href="#vídeos" id="toc-vídeos" class="nav-link" data-scroll-target="#vídeos"><span class="header-section-number">1.2.4</span> Vídeos</a></li>
+  <li><a href="#include" id="toc-include" class="nav-link" data-scroll-target="#include"><span class="header-section-number">1.2.5</span> Include</a></li>
+  </ul></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto"><span class="header-section-number">1.3</span> Quarto</a></li>
+  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code"><span class="header-section-number">1.4</span> Running Code</a>
+  <ul class="collapse">
+  <li><a href="#fontawesome" id="toc-fontawesome" class="nav-link" data-scroll-target="#fontawesome"><span class="header-section-number">1.4.1</span> Fontawesome</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="Seccion-04-Markdown_av.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="introducción-a-la-sección" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introducción a la sección 👀</h1>
+<ul>
+<li><p>Notas al pie</p></li>
+<li><p>Shortcode</p></li>
+<li><p>Diagramas</p></li>
+<li><p>Divs y spans</p></li>
+<li><p>Divs de Quarto</p></li>
+</ul>
+<section id="citas" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="citas"><span class="header-section-number">1.1</span> Citas</h2>
+<p>Los robles 🌳 son árboles pertenecientes al género <em>Quercus</em>, dentro de la familia de las Fagáceas. Son considerados una de las especies arbóreas más emblemáticas y ampliamente distribuidas en el hemisferio norte, con una presencia significativa en Europa, América del Norte y Asia Su importancia ecológica y cultural los convierten en objeto de estudio y admiración en diversos campos, como la botánica, la silvicultura y la conservación de la biodiversidad.</p>
+<p>Los robles se caracterizan por tener troncos fuertes y rectos , con una corteza rugosa y surcada que se vuelve más gruesa a medida que el árbol envejece. Su altura puede variar dependiendo de la especie y las condiciones de crecimiento, pero en general, los robles alcanzan alturas considerables, llegando a superar los 30 metros en muchas ocasiones<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. El diámetro del tronco también puede ser notable, proporcionando estabilidad y resistencia.</p>
+<p>Las hojas de los robles son caducas 🍂, es decir, se caen durante el otoño. Son alternas y generalmente tienen forma lobulada, aunque esto puede variar ligeramente según la especie. Las hojas son de color verde intenso en la primavera y el verano, pero durante el otoño adquieren tonalidades cálidas y atractivas, como el rojo, el amarillo y el marrón. Estas hojas son una fuente importante de alimento para muchas especies de herbívoros 🦌.</p>
+<div style="page-break-after: always;"></div>
+<p>Otra característica distintiva de los robles son sus frutos llamados bellotas . Estas semillas, contenidas en pequeñas copas o cupules, maduran en otoño y son dispersadas por el viento o por la acción de animales como ardillas y pájaros. Las bellotas son una fuente de alimento para diversos animales y también tienen una importancia clave en la regeneración de los robles, ya que germinan y dan lugar a nuevos individuos.</p>
+<p>En cuanto a su distribución 🗺️, los robles se encuentran en una amplia gama de hábitats, desde bosques templados y mixtos hasta zonas montañosas y áreas de transición entre diferentes ecosistemas. Cada región alberga diferentes especies de robles adaptadas a las condiciones climáticas y edáficas específicas. Algunas de las especies más conocidas incluyen el roble europeo (<em>Quercus robur</em>), el roble americano (<em>Quercus alba</em>) y el roble rojo (<em>Quercus rubra</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>).</p>
+<p>En resumen, los robles son árboles de gran envergadura y longevidad, caracterizados por su tronco robusto, hojas lobuladas y producción de bellotas. Su distribución geográfica abarca varias regiones del hemisferio norte, y su presencia es de gran importancia ecológica y cultural. Estos árboles icónicos merecen nuestra atención y conservación para asegurar su supervivencia y perpetuar su legado en los ecosistemas que habitan.</p>
+</section>
+<section id="shortcode" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="shortcode"><span class="header-section-number">1.2</span> Shortcode</h2>
+<section id="meta" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="meta"><span class="header-section-number">1.2.1</span> Meta</h3>
+<p>El autor de este documento es Adrián Cidre González</p>
+<p>El título de este documento es Prueba</p>
+</section>
+<section id="pagebreak" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="pagebreak"><span class="header-section-number">1.2.2</span> Pagebreak</h3>
+<p>Insertar un salto de página en los párrafos anteriores</p>
+</section>
+<section id="kbd" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="kbd"><span class="header-section-number">1.2.3</span> Kbd</h3>
+<p>Para introducir un bloque de código utilizamos <kbd>Ctrol+Alt+I</kbd></p>
+</section>
+<section id="vídeos" class="level3" data-number="1.2.4">
+<h3 data-number="1.2.4" class="anchored" data-anchor-id="vídeos"><span class="header-section-number">1.2.4</span> Vídeos</h3>
+<p>Incluir el vídeo https://www.youtube.com/watch?v=utOzN4pO6hM con tamaño 500x500 y que empiece en el minuto 5:20.</p>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/utOzN4pO6hM?start=320" width="500" height="500" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="include" class="level3" data-number="1.2.5">
+<h3 data-number="1.2.5" class="anchored" data-anchor-id="include"><span class="header-section-number">1.2.5</span> Include</h3>
+<p>Incluir otro archivo de Quarto</p>
+</section>
+</section>
+<section id="quarto" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="quarto"><span class="header-section-number">1.3</span> Quarto</h2>
+<p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
+</section>
+<section id="running-code" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="running-code"><span class="header-section-number">1.4</span> Running Code</h2>
+<p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<p>You can add options to executable code like this</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+</div>
+<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+<section id="fontawesome" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="fontawesome"><span class="header-section-number">1.4.1</span> Fontawesome</h3>
+<p>Instalar fontawesome e introducir un símbolo: <i class="fa-solid fa-cat" aria-label="cat"></i></p>
+</section>
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas</h2>
+
+<ol>
+<li id="fn1"><p>El más alto de mundo mide 379 pies.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Especie nativa de América que se planta en Europa.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

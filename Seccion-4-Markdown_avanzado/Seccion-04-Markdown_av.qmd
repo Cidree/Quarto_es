@@ -1,0 +1,95 @@
+---
+title: "Sección 4 - Markdown Avanzado"
+author: "Adrián Cidre González"
+date: today
+lang: es
+
+# Fuentes ------------------------------
+fontfamily: courier
+fontsize: 12pt
+
+# Tablas de contenidos -----------------
+number-sections: true
+toc: true
+toccolor: teal
+
+# Formatos ------------------------------
+format: 
+  html:
+    theme: materia
+    title-block-banner: '#000A5F'
+    title-block-banner-color: '#81F3D6'
+  pdf: 
+    documentclass: scrartcl
+    indent: true
+
+editor: visual
+---
+
+# Introducción a la sección 👀
+
+-   Notas al pie
+
+-   Shortcode
+
+-   Diagramas
+
+-   Divs y spans
+
+-   Divs de Quarto
+
+## Citas
+
+Los robles 🌳 son árboles pertenecientes al género *Quercus*, dentro de la familia de las Fagáceas. Son considerados una de las especies arbóreas más emblemáticas y ampliamente distribuidas en el hemisferio norte, con una presencia significativa en Europa, América del Norte y Asia Su importancia ecológica y cultural los convierten en objeto de estudio y admiración en diversos campos, como la botánica, la silvicultura y la conservación de la biodiversidad.
+
+Los robles se caracterizan por tener troncos fuertes y rectos , con una corteza rugosa y surcada que se vuelve más gruesa a medida que el árbol envejece. Su altura puede variar dependiendo de la especie y las condiciones de crecimiento, pero en general, los robles alcanzan alturas considerables, llegando a superar los 30 metros en muchas ocasiones[^1]. El diámetro del tronco también puede ser notable, proporcionando estabilidad y resistencia.
+
+[^1]: El más alto de mundo mide 379 pies.
+
+Las hojas de los robles son caducas 🍂, es decir, se caen durante el otoño. Son alternas y generalmente tienen forma lobulada, aunque esto puede variar ligeramente según la especie. Las hojas son de color verde intenso en la primavera y el verano, pero durante el otoño adquieren tonalidades cálidas y atractivas, como el rojo, el amarillo y el marrón. Estas hojas son una fuente importante de alimento para muchas especies de herbívoros 🦌.
+
+{{< pagebreak >}}
+
+Otra característica distintiva de los robles son sus frutos llamados bellotas . Estas semillas, contenidas en pequeñas copas o cupules, maduran en otoño y son dispersadas por el viento o por la acción de animales como ardillas y pájaros. Las bellotas son una fuente de alimento para diversos animales y también tienen una importancia clave en la regeneración de los robles, ya que germinan y dan lugar a nuevos individuos.
+
+En cuanto a su distribución 🗺️, los robles se encuentran en una amplia gama de hábitats, desde bosques templados y mixtos hasta zonas montañosas y áreas de transición entre diferentes ecosistemas. Cada región alberga diferentes especies de robles adaptadas a las condiciones climáticas y edáficas específicas. Algunas de las especies más conocidas incluyen el roble europeo (*Quercus robur*), el roble americano (*Quercus alba*) y el roble rojo (*Quercus rubra*[^2]).
+
+[^2]: Especie nativa de América que se planta en Europa.
+
+En resumen, los robles son árboles de gran envergadura y longevidad, caracterizados por su tronco robusto, hojas lobuladas y producción de bellotas. Su distribución geográfica abarca varias regiones del hemisferio norte, y su presencia es de gran importancia ecológica y cultural. Estos árboles icónicos merecen nuestra atención y conservación para asegurar su supervivencia y perpetuar su legado en los ecosistemas que habitan.
+
+## Shortcode
+
+### Meta
+
+El autor de este documento es {{< meta author >}}
+
+El título de este documento es {{< meta title >}}
+
+### Pagebreak
+
+Insertar un salto de página en los párrafos anteriores
+
+### Kbd
+
+Para introducir un bloque de código utilizamos {{< kbd Ctrol+Alt+I >}}
+
+### Vídeos
+
+Incluir el vídeo https://www.youtube.com/watch?v=utOzN4pO6hM con tamaño 500x500 y que empiece en el minuto 5:20.
+
+{{< video https://www.youtube.com/watch?v=utOzN4pO6hM 
+      width="500"
+      height="500"
+      start="320"
+>}}
+
+### Include
+
+Incluir otro archivo de Quarto
+
+{{< include prueba.qmd >}}
+
+### Fontawesome
+
+Instalar fontawesome e introducir un símbolo: {{< fa cat >}}
