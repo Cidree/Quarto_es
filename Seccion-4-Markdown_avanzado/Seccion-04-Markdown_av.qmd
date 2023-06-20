@@ -78,11 +78,7 @@ Para introducir un bloque de código utilizamos {{< kbd Ctrol+Alt+I >}}
 
 Incluir el vídeo https://www.youtube.com/watch?v=utOzN4pO6hM con tamaño 500x500 y que empiece en el minuto 5:20.
 
-{{< video https://www.youtube.com/watch?v=utOzN4pO6hM 
-      width="500"
-      height="500"
-      start="320"
->}}
+{{< video https://www.youtube.com/watch?v=utOzN4pO6hM width="500" height="500" start="320" >}}
 
 ### Include
 
@@ -93,3 +89,73 @@ Incluir otro archivo de Quarto
 ### Fontawesome
 
 Instalar fontawesome e introducir un símbolo: {{< fa cat >}}
+
+## Diagramas
+
+Generar el organigrama de mando y comunicación de ataque ampliado en incendios forestales en la comunidad autónoma de Extremadura (España):
+
+```{mermaid}
+flowchart TB
+
+  %% Nivel 1 -> nivel 2
+  MD[(Mando directivo)] ==> DE([Director de extinción])
+  
+  %% Nivel 2 -> nivel 3
+  DE ==> AP(Ayudante de Planificación)
+  DE ==> AO(Ayudante de Operaciones)
+  DE ==> AL(Ayudante de Logística)
+  
+  %% AO -> nivel 4
+  AO --> SE(SECTORES)
+  AO --> MA(Medios Aéreos)
+  
+  %% Sectores -> nivel 5
+  SE -.-> MP(Maquinaria Pesada)
+  SE -.-> BE(Brigadas de Extinción)
+  SE -.-> VA(Vehículos Autobomba)
+  
+  %% Ayudante logistica -> nivel 4
+  AL --- CO(Comunicaciones)
+  CO --- HE(Herramientas y equipos)
+  HE --> AA(Alimentación y alojamientos)
+  
+  %% Estilos de líneas
+  linkStyle 0 stroke:red, stroke-width: 5px;
+  linkStyle 1,2,3 stroke:darkblue, stroke-width: 3px;
+  linkStyle 4,5,9,10,11 stroke:green, stroke-width: 2px;
+  linkStyle 6,7,8 stroke:gray, stroke-width: 2px;
+  
+  %% Estilos los nodos
+  
+  %% Nivel 1 y 2
+  style MD color: #05418A, fill:#EDF3A4, stroke:black, stroke-width: 5px;
+  style DE color: #05418A, fill:#E6F9F4, stroke:black, stroke-width: 3px;
+  
+  %% Nivel 3
+  style AP color:#05418A, fill:#F3D7A4, stroke:black, stroke-width: 2px;
+  style AO color:#05418A, fill:#F3D7A4, stroke:black, stroke-width: 2px;
+  style AL color:#05418A, fill:#F3D7A4, stroke:black, stroke-width: 2px;
+  
+  %% Nivel 4
+  style SE color:#05418A, fill:#BBF5B2, stroke:black, stroke-width: 2px;
+  style MA color:#05418A, fill:#BBF5B2, stroke:black, stroke-width: 2px;
+  style CO color:#05418A, fill:#BBF5B2, stroke:black, stroke-width: 2px;
+  style HE color:#05418A, fill:#BBF5B2, stroke:black, stroke-width: 2px;
+  style AA color:#05418A, fill:#BBF5B2, stroke:black, stroke-width: 2px;
+  
+  %% Nivel 5 
+  style MP color:#05418A, fill:#F3E2F7, stroke:black, stroke-width: 2px;
+  style BE color:#05418A, fill:#F3E2F7, stroke:black, stroke-width: 2px;
+  style VA color:#05418A, fill:#F3E2F7, stroke:black, stroke-width: 2px;
+  
+  %% Enlaces
+  click MP "https://incendiosforestales.webnode.es/medios-de-extincion/terrestres/maquinaria-pesada/"
+  click MA "https://www.miteco.gob.es/es/biodiversidad/temas/incendios-forestales/extincion/medios_aereos.aspx"
+  click VA "https://es.wikipedia.org/wiki/Veh%C3%ADculo_de_bomberos"
+```
+
+Introducir un diagrama de drawio:
+
+```{=html}
+<iframe frameborder="0" style="width:100%;height:800px;" src="https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Diagrama_Aleatorio.drawio#R7Z3bdqM4FoafJpeZhSSOlzmn10qmsjq1pqb7TsGKrQk2boyTSj%2F9QAx2YOMMcomdiFFfVMcCA%2F71ocOvLemInc1%2FXmV8ObtNJyI5os7k5xE7P6I0ivzi3zLhdZPgBWyTMM3kZJNEdgn38m9RJTpV6lpOxKpxYp6mSS6XzcQ4XSxEnDfSeJalL83THtOkedclnwqQcB%2FzBKb%2BkJN8VqUSP9oduBZyOqtuHdJgc%2BCBx0%2FTLF0vqvst0oXYHJnz%2BjLVb1zN%2BCR9eZfELo7YWZam%2Beav%2Bc8zkZSq1optvne55%2Bj2kTOxyHt9gXnVkzzzZF398Fs%2Bn%2FOkesD8tdaj%2BGYhffHh9GUmc3G%2F5HF55KXI%2FCJtls%2BT4hMp%2Ftz%2BKKf48Jgu8ks%2Bl0lJwbVInkUuY14dqDKd1ieepUmavd2NXb79V6TzRE4XRVpc%2FCSRlZfPs%2FRpmyWs%2FKpMkndfLXIoekvfnFkfecsGdgolqlR7Flkufr5LqiS7Eulc5NlrcUp11KPsH97mSxXbNCB1yss7Vupsnr3DZJvIKz6n2%2BvvMqr4o8qrvflGQL79tliV74Gx%2BXbphIHj7cu3acYnUuzupS87CXFAfrro%2BUlBfp7KbGJubl6Enu%2FSAd9CEjikkWnM87EzjYFMu5SrmbmZNnjRSSLmNzItdNAzzYVvGo8LgSQ3N%2BMC5sc8HPRtI823jRD8Os%2BDr9t6MZXmZtvHVZ6Wus1v122EORFutvkw25L0pVDI2HwbvHLzvLCdbZ%2FwvgUg404WsIH51tURkyprWko9evzR21swQaEbOfsux%2FflnQato6D9irikt9SuHqVDoPR5mixncqGmtu%2Benl7s5fJLqM3cNtku6WwCsOHUjmDJs5iclJ7BPrF8oOn71tI75fYqtErXWVxbCx6pfnDOs6nItw9W%2FTwxaVgTUMtMJDyXz02n4tdE8R09ojzWVZo2UcgnikL0iLKtL7SJQj9RFPpVXx%2F2iaIwPaIUDfmzk1CfKB7xP1EUV5som96NNlLcTxQF9mKgSsVz3VcfK5kOEu5Se2Hs9RSubguEzV4jpZ11vdPViHU%2BqOyrG96lsmyQ7rsb292tvsjmR1bfo%2B%2Bc8dal6P4Hry%2B1UQZc6o2ArRJ9oYB9pMGg0F8Z9S1iLBRqUMD%2B141Mx9clcAnoEvjIXQIfdsAuErGccdX%2BrgFyMyA3c7HljoDcZ%2Fz%2FQek9A4XDKR3A8d0rmfHHRzE%2BtYFnRrsHFwZUG47KnqfT0SntOsCdxC5BAtqh9OJJvI5P7LAtdoitNRzmvBFp8aMmoxPb%2FwJkw%2FHJ6zRbja%2B89sHQFH55Dfvif4qHDA4EG691BOpG7CZ2ALu4V%2Fzv4qzxkR2QNtnoLewA9h2BzAcYCjA25H2OKBsK2xGPpqEQKBoKx8UJLcG7Y4E0WQod9yPewa7CMfng6YfwFQLY2TWHjdoUsWwMwwbsmZvDRj2MbtkYhI0QegnmsOFbNgZlAzofBrERWTaGZIMazEZtoFo2hmEDeksGsdE3NMmycRAb0AkziA1q2RiSjWGiaJDY6BuoZtk4iI1hgmmQ2OgbmmbZOIgNo31Rxeg7y4YaG9AXPRWKoxMmzHfpGJ1Anu8SQpfxOs0WYoSTi%2BDc8v7zuPSIHUHb7jJRjJMwQWm4KoODrTQ0wb6LbC7zERYicF4pdiESUaD2LV%2FkcjU6sYnD2mqH2GJ3xADxyevDWjG6zQS14ZxpdLU71ihY57nIHkdYcBMK6MYvSzqWFkiEYhyQEVqHn19Lwu75bbr6ay3zdIR6w8Ar9PYf7PLeL%2BWkY%2F2FEagNujYMW%2B2OTuR6%2FpCIhxF2JYuiG0zdQS9OECNWLr2TS%2B%2BgiajbaeytiBXFaCZQeHeKrcnOAbXy7m6qXk7HEmvgWhqtHNeBfV5zoAgVQ1UsFD2hQIxR0Q%2BFYoyKhaInFNBFMAeK2tqzUGiGAjEqRT8UilEpFoqeUCCGo%2BiHglooBoECMQ5FPxSKcSgWip5QIAag6IdCMQDFQtETCsTIE%2F1QKEaeWCh6QoE4FU8%2FFIrTNC0UPaEw2dGMrKM5CBTEZEczso7mMFBAR%2FOCT1VXVHh0QhGSrz3Q5Le2H%2FC6F40ebJjJJRRIfSeLSykux2eC1pHb3KMDe0jPJdB%2Bu%2BYvT%2BNT2o2aVLsMm2roaV3yJB4j1R5tas2Q4zDcevHURhzG2051IxTbba2UGmGLDS2Y%2BzzNRliG%2BKy9KC221NDYuEz4XC6mqvFcBqgd%2BM26kXQvozWg2tAxuBOL6Vp1qxATxA79FtoeNtqwJ%2F7tBW6NabzQEWlSzbDLEAp7tyfJAy%2FEWamG8xsgt99q9nkBciFCYb%2FxTiQy5iMsRILWou1e%2Fx0HNYkNe473LzxJxtjuC4NW19HHLkgwIzec8OItQw6wyaqnathkWzunt03WJJt0k63LJmvVxc7BE3vJ%2FucewiSjmHEb2pFQHaK3SPRBAjNqQzsSqgP0Fok%2BSGDGbGhHQnV43iLRBwnMiA3tSKgOzlsk%2BiCBGa%2BhHQnVoXmLRB8kMKM1tCOhOjBvkeiBBINulkFIqE40skj0QQJz7pl2JKhFYgAkqMFIUIvEEEiY7F7W51oktCJhsntZ%2B%2FwWCa1IQPfyTmTxDHBh%2Bj5aYOwuwI62YB1rFfH4SWRCMQrABLXDVoytH2GrDQ237%2BvF%2BHbjIxFrDpP66FxDH%2Bt%2BxlXD4wyQmjpeS2rswHEG%2FaEfMz7CXQ%2BLaq9VWmNHWrjQdznlqgFERigdtJTu3hJ4QKU7Jp6MsEos5wI1hI6wC2oXmgTfXle56uJ9RmjdauyF2AH6Lux9%2F84V11s1QGgShe3uCnad6MJO7fdCVsXl303QOmw1P6LuDRgGlBp2Fs94%2FihXY%2BwutsQOsWeduIbsPFMVdE2zprYV%2Bu8u4jaLke7uora9RZp3o9HBdk0rRpXAK%2Bl0a1xDdpzpZkJ5J27LRB8mDNmBu5sJ5R24LRN9mECMI9HPhPLuypaJHkx40NAwiAnFQBLLRD8mECNJtDNRN7MtE3qZoCYzQS0TQzBhyM7a3UwoxpJYJvoxgRhMop8J5V2TLRN9mECcC6efCcW5cJaJfkyY7GO61scchImObcTyTCzzNE7jeK04ys5pNIm9rz2c4LfWwSNOvXs4zmiCB13Ci3gmMhlLXiQXPzuRI1S9HUzJsJcf9KATd8PjPH3g8WuSjJH0sBW5Q0g9yRxHcR%2F6XNflejSl5MqxDiYIHgHBI1zBoYl0Kh%2FlpBJcrufj0zyk7YIFeW9I16cdVShfzopSZbSVqOe1VC9YR1Yd0Qg5odH5mXdYY7YqAJqNWV%2FRMKUtuY%2FfLUk9QGsW3I4d2phlHzz4EM1ZH9EK0U%2BFoj1mqehLBaIZop0KT3EQ1lLRlwpEO0R%2FWUEtFcNQgRjYpb%2BsUAzisVT0pQKaNn%2B%2BTtP5a5zmijPZTNgAnnntDeAJDXC7stCtuY8zuSwZ%2BJHJXC6mI5Q9ALvWMBc5sjzoWLN5FY%2BXdBeQ7mJ3ZetpX80JbnIiR6s6DQHoLva8oIAC1W%2FXq1mWpooumQmCEyi4Vy9xhiQ39GtuZDwTqmuTGyC28xXohkbIaSb4pEi6TZPJCEUHm7R9QkEOfYY%2FBF8pToAzQO3Ihw0VhlucwM572SBfLdNMdZ88E%2BT%2B7OZ40LGGR7Z%2BfFTelPDri00cCtV2cOGGvc2z2WueyRGW2zQCaiOPmgaYS73%2Bwh6slUpNxydQdYfddsndVW7r8nvAzUh9N2XDZ%2B9zD2H3hJhLvepGwrdIDIEE4gQd%2FUgoTtqySPRCAjoI5iBR%2B3wWCa1IYC71qh0J1fgDi0QfJBBDUvQjQS0SAyCBGI%2BiHwnFCVsWiV5IYG5UpR0JxflaFoleSGBuVKUdCcXpWhaJXkhgblSlHQnFVacsEr2QMNq9VI1Xs0j0QCKC7uXdTCZ8UmR6lo5vM3CfgoxysBepjqA9eM5niVQN3vn6aheVEFAbe6A9opBwka8XY5S7A27s5aoj6Gqd8ThXndhmgNoMjrQTiq02NIy%2BrxO5HJ%2FYMPaShNglCbRiboqqMh6f2DBkh2LHFkfQ5DjnhaqJHGGrhMHABoYbRhJBA%2BEuXS5fRye1C0tt5uFKDTvmVyJ7ENn4GiRe0BExjxqwE8Eu77csnilHR319rQMY1MpcTLA9B%2FYlr4qepEyT8ZEddFSRyO0Rz4H9yN%2FTlWqUpQFawxh5Uo%2BBICkN%2B5BA5a%2BwBWclSsM422LS1zgjoNPudYKtyTqDtyO7%2B6maZ%2FSDZx%2FAPvMcQ7br7QJj6%2F1ZMAYAAzOSQzsYtsQYDgzMeA7tYFALxmBgYEZ1aAdDMdDHgqEABmZsh3YwFMN9LBgKYGBGeGgHQzHox4KhAAZmnId2MBRDfywY%2FcEgmHPVtIOhGABkwVAAA3PGmnYwFCcxWjAUwKAmg6E4ldGCoQCGwc7ndqTKgjEAGO6HHKRZPkun6YInF7vU090QVWtYSfyU%2Bb%2FL5H8EXvXxj%2BqsIuOz1%2FfHys%2F1wVXxk3JAWpF2Kctnry6wZfEhSeOnTVJ1Qnnz%2F4g8f72Xf5fPzdd5WiTtHv8mTZfVeQBYQjl%2F8ADcfjVOVl2SOnDcjF56p8FZb763o%2BnNgo%2F07XVnIuG5fBaNO%2FzaWBnpMjj9JK9%2Ba4MM%2F691Wh84Xr2pclKcwJzlzzcJ6uPFX9Py%2Fze%2F%2Feu3f17Vl3vI6vTTiyL5vk4vnnFzp81BeDoENEnkclUy8jKTubhf8jeFXzK%2BbOLYGP0sb3LJ5zIp36trkTyLXMa8mcfsozzmiZwuirS4yGORdYG0PbUDpOY47nbA9e3m1U8rH3ma8YkUuweoXoa9fKksNdRcWNUPumLEaNBRKG4Tf5E16Jl%2BzwQcAR8uf7ve4W1W7Mnf93VdKxcD5sd87yo8GvKM1Q26Ks8C2jtoYZv4i3kG7cxv2ZQv5KooiVRj%2BwzY%2F4I6TcX9%2ForrCV4g0Cb8xp9GpzNzonY7x8dWGvpupzKLZ6PT2nWB1siLVnoUWln3siiis0eRja8QKVrVLcF9F1twaBHdiWxVNoWPyrv6Zbu3VORcPIskXc7FQnExSxPygbXBV6hANeUDdGTu5EIx6s8AqevNFT6N965FiOfj03m7bksldIi8J5pXb4faWMFSrPLFenzlh0tbYkfYYsPe%2BakQI2yi0PCzlYZ907t0mfBsdFITtyW1hztXzKOwS%2FmjULGQYWxSs2alGCJvjOtRxJCTw3c82vpCTdefKA4gH%2B%2BGFiu9j9mgex513JDCvYr6Gv%2FHhH3w%2BENY%2FxT2f09iHqvOtDfgPQya72GA3WZiiIEc%2Bt9DxfF6%2Bx4qvocMdtUNokNx0N7SoUoHNBDMoaMuUi0dQ9FhxF7Z%2B%2BhQnLhk6VClA3Fam346qKVjWDoQ57bpp0NxCpOlQ5UOI%2FbQ3keH4jwmS4cqHUbspb2PDsXJTJYOVTpM9h2p4owmS4cqHYjz3fTTYV3pYelwTfZKqXXDBqbDCK%2BUeZ1x%2Fp4yHaTef6OW13XCQekAN2S7G6rT4Xzw%2BIPQ0QuGHrNX3k9eIZ387KaelBc5eOpJwPyzkxDwSOEwm%2B8%2BPAh69L%2BnpDDX9c77F2R1kXVgQfarU1KKj1lazhrZZXrGl7PbdCLKM%2F4L"></iframe>
+```
