@@ -1,0 +1,99 @@
+
+
+
+/* Selector universal */
+
+* {
+  margin: 0;
+}
+
+/* Selectores básicos */
+
+h1, 
+h2, 
+h3 {
+  color: darkgreen;
+}
+
+p {
+  font-size: 16px;
+}
+
+ul {
+  background-color: #F3E2F7;
+}
+
+ol {
+  color: darkorange;
+}
+
+span {
+  background-color: yellow;
+}
+
+
+/* Clases */
+
+.mi-clase {
+  color: darkblue;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.quarto-title-meta-heading {
+  margin: 20px;
+  padding: 20px;
+  background-color: red;
+}
+
+/* ID */
+
+#title-block-header {
+  background-color: lightgreen;
+  margin: 20px;
+}
+
+/* Imagenes */
+
+.figure-img {
+  margin: 60px;
+}
+
+.figure-caption {
+  text-align: center;
+}
+
+
+.kbd {
+  background-color: lightgreen;
+  
+  color: darkblue;
+}
+
+
+/* Selectores anidados 
+
+ul p {
+  background-color: red;
+}
+*/
+
+/* Pseudoclases */
+
+
+ul p:hover,
+.nav-link:hover {
+  background-color: #E37545;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -21,41 +21,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="Seccion-04-Markdown_av_files/libs/clipboard/clipboard.min.js"></script>
@@ -94,6 +79,7 @@ background: #000A5F;
 <link href="Seccion-04-Markdown_av_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -118,7 +104,7 @@ background: #000A5F;
       <div>
       <div class="quarto-title-meta-heading">Fecha de publicación</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">20 de junio de 2023</p>
+        <p class="date">21 de junio de 2023</p>
       </div>
     </div>
     
@@ -169,13 +155,37 @@ background: #000A5F;
 </ul>
 <section id="citas" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="citas"><span class="header-section-number">1.1</span> Citas</h2>
-<p>Los robles 🌳 son árboles pertenecientes al género <em>Quercus</em>, dentro de la familia de las Fagáceas. Son considerados una de las especies arbóreas más emblemáticas y ampliamente distribuidas en el hemisferio norte, con una presencia significativa en Europa, América del Norte y Asia Su importancia ecológica y cultural los convierten en objeto de estudio y admiración en diversos campos, como la botánica, la silvicultura y la conservación de la biodiversidad.</p>
+<p>Los robles 🌳 son árboles pertenecientes al género <em>Quercus</em>, dentro de la familia de las Fagáceas. Son considerados una de las especies arbóreas más emblemáticas y ampliamente distribuidas en el hemisferio norte, con una presencia significativa en Europa, América del Norte y Asia Su importancia ecológica y cultural los convierten en objeto de estudio y admiración en diversos campos, como la botánica, la silvicultura y la conservación de la biodiversidad <span class="citation" data-cites="breiman2001">(<a href="#ref-breiman2001" role="doc-biblioref">Breiman 2001</a>)</span>.</p>
+<div class="quarto-title-meta-heading mi-clase">
 <p>Los robles se caracterizan por tener troncos fuertes y rectos , con una corteza rugosa y surcada que se vuelve más gruesa a medida que el árbol envejece. Su altura puede variar dependiendo de la especie y las condiciones de crecimiento, pero en general, los robles alcanzan alturas considerables, llegando a superar los 30 metros en muchas ocasiones<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. El diámetro del tronco también puede ser notable, proporcionando estabilidad y resistencia.</p>
-<p>Las hojas de los robles son caducas 🍂, es decir, se caen durante el otoño. Son alternas y generalmente tienen forma lobulada, aunque esto puede variar ligeramente según la especie. Las hojas son de color verde intenso en la primavera y el verano, pero durante el otoño adquieren tonalidades cálidas y atractivas, como el rojo, el amarillo y el marrón. Estas hojas son una fuente importante de alimento para muchas especies de herbívoros 🦌.</p>
+</div>
+<p>Las hojas de los robles son caducas 🍂, es decir, se caen durante el otoño. Son alternas y generalmente tienen forma lobulada, aunque esto <span class="mi-clase">puede variar ligeramente</span> según la especie. Las hojas son de color verde intenso en la primavera y el verano, pero durante el otoño adquieren tonalidades cálidas y atractivas, como el rojo, el amarillo y el marrón. Estas hojas son una fuente importante de alimento para muchas especies de herbívoros 🦌.</p>
 <div style="page-break-after: always;"></div>
+<div style="color: darkorange;">
 <p>Otra característica distintiva de los robles son sus frutos llamados bellotas . Estas semillas, contenidas en pequeñas copas o cupules, maduran en otoño y son dispersadas por el viento o por la acción de animales como ardillas y pájaros. Las bellotas son una fuente de alimento para diversos animales y también tienen una importancia clave en la regeneración de los robles, ya que germinan y dan lugar a nuevos individuos.</p>
-<p>En cuanto a su distribución 🗺️, los robles se encuentran en una amplia gama de hábitats, desde bosques templados y mixtos hasta zonas montañosas y áreas de transición entre diferentes ecosistemas. Cada región alberga diferentes especies de robles adaptadas a las condiciones climáticas y edáficas específicas. Algunas de las especies más conocidas incluyen el roble europeo (<em>Quercus robur</em>), el roble americano (<em>Quercus alba</em>) y el roble rojo (<em>Quercus rubra</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>).</p>
+</div>
+<p>En cuanto a su distribución 🗺️, los robles se encuentran en una amplia gama de hábitats, desde bosques templados y mixtos hasta zonas montañosas y áreas de transición entre diferentes ecosistemas. Cada región alberga diferentes especies de robles adaptadas a las condiciones climáticas y edáficas específicas. Algunas de las especies más conocidas incluyen el roble europeo (<em>Quercus robur</em>), el roble americano (<em>Quercus alba</em>) y el roble rojo (<em>Quercus rubra</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>). El <em>Q. robur</em> <a href="#fig-qrobur">Figura&nbsp;1</a> es una especie nativa de Europa, que se extiende principalmente por la zona Atlántica y el interior Europeo. En cambio, el <em>Q. rubra</em> <a href="#fig-qrubra">Figura&nbsp;2</a> es una especie nativa de la zona oriental de Estados Unidos y sureste de Canadá, aunque también se planta para la producción de madera en Europa.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-qrobur" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="00_figs/qrobur.jpg" class="img-fluid figure-img" width="512"></p>
+<figcaption class="figure-caption">Figura&nbsp;1: Hoja y fruto de <em>Quercus robur</em></figcaption>
+</figure>
+</div>
+</div>
+</div>
 <p>En resumen, los robles son árboles de gran envergadura y longevidad, caracterizados por su tronco robusto, hojas lobuladas y producción de bellotas. Su distribución geográfica abarca varias regiones del hemisferio norte, y su presencia es de gran importancia ecológica y cultural. Estos árboles icónicos merecen nuestra atención y conservación para asegurar su supervivencia y perpetuar su legado en los ecosistemas que habitan.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-qrubra" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="00_figs/qrubra.jpg" class="img-fluid figure-img" width="400"></p>
+<figcaption class="figure-caption">Figura&nbsp;2: Hojas de <em>Quercus rubra</em></figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="shortcode" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="shortcode"><span class="header-section-number">1.2</span> Shortcode</h2>
@@ -210,7 +220,6 @@ background: #000A5F;
 <h2 data-number="1.4" class="anchored" data-anchor-id="running-code"><span class="header-section-number">1.4</span> Running Code</h2>
 <p>When you click the <strong>Render</strong> button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
 </div>
@@ -298,11 +307,16 @@ background: #000A5F;
 </div>
 <p>Introducir un diagrama de drawio:</p>
 <iframe frameborder="0" style="width:100%;height:800px;" src="https://viewer.diagrams.net/?tags=%7B%7D&amp;highlight=0000ff&amp;edit=_blank&amp;layers=1&amp;nav=1&amp;title=Diagrama_Aleatorio.drawio#R7Z3bdqM4FoafJpeZhSSOlzmn10qmsjq1pqb7TsGKrQk2boyTSj%2F9QAx2YOMMcomdiFFfVMcCA%2F71ocOvLemInc1%2FXmV8ObtNJyI5os7k5xE7P6I0ivzi3zLhdZPgBWyTMM3kZJNEdgn38m9RJTpV6lpOxKpxYp6mSS6XzcQ4XSxEnDfSeJalL83THtOkedclnwqQcB%2FzBKb%2BkJN8VqUSP9oduBZyOqtuHdJgc%2BCBx0%2FTLF0vqvst0oXYHJnz%2BjLVb1zN%2BCR9eZfELo7YWZam%2Beav%2Bc8zkZSq1optvne55%2Bj2kTOxyHt9gXnVkzzzZF398Fs%2Bn%2FOkesD8tdaj%2BGYhffHh9GUmc3G%2F5HF55KXI%2FCJtls%2BT4hMp%2Ftz%2BKKf48Jgu8ks%2Bl0lJwbVInkUuY14dqDKd1ieepUmavd2NXb79V6TzRE4XRVpc%2FCSRlZfPs%2FRpmyWs%2FKpMkndfLXIoekvfnFkfecsGdgolqlR7Flkufr5LqiS7Eulc5NlrcUp11KPsH97mSxXbNCB1yss7Vupsnr3DZJvIKz6n2%2BvvMqr4o8qrvflGQL79tliV74Gx%2BXbphIHj7cu3acYnUuzupS87CXFAfrro%2BUlBfp7KbGJubl6Enu%2FSAd9CEjikkWnM87EzjYFMu5SrmbmZNnjRSSLmNzItdNAzzYVvGo8LgSQ3N%2BMC5sc8HPRtI823jRD8Os%2BDr9t6MZXmZtvHVZ6Wus1v122EORFutvkw25L0pVDI2HwbvHLzvLCdbZ%2FwvgUg404WsIH51tURkyprWko9evzR21swQaEbOfsux%2FflnQato6D9irikt9SuHqVDoPR5mixncqGmtu%2Benl7s5fJLqM3cNtku6WwCsOHUjmDJs5iclJ7BPrF8oOn71tI75fYqtErXWVxbCx6pfnDOs6nItw9W%2FTwxaVgTUMtMJDyXz02n4tdE8R09ojzWVZo2UcgnikL0iLKtL7SJQj9RFPpVXx%2F2iaIwPaIUDfmzk1CfKB7xP1EUV5som96NNlLcTxQF9mKgSsVz3VcfK5kOEu5Se2Hs9RSubguEzV4jpZ11vdPViHU%2BqOyrG96lsmyQ7rsb292tvsjmR1bfo%2B%2Bc8dal6P4Hry%2B1UQZc6o2ArRJ9oYB9pMGg0F8Z9S1iLBRqUMD%2B141Mx9clcAnoEvjIXQIfdsAuErGccdX%2BrgFyMyA3c7HljoDcZ%2Fz%2FQek9A4XDKR3A8d0rmfHHRzE%2BtYFnRrsHFwZUG47KnqfT0SntOsCdxC5BAtqh9OJJvI5P7LAtdoitNRzmvBFp8aMmoxPb%2FwJkw%2FHJ6zRbja%2B89sHQFH55Dfvif4qHDA4EG691BOpG7CZ2ALu4V%2Fzv4qzxkR2QNtnoLewA9h2BzAcYCjA25H2OKBsK2xGPpqEQKBoKx8UJLcG7Y4E0WQod9yPewa7CMfng6YfwFQLY2TWHjdoUsWwMwwbsmZvDRj2MbtkYhI0QegnmsOFbNgZlAzofBrERWTaGZIMazEZtoFo2hmEDeksGsdE3NMmycRAb0AkziA1q2RiSjWGiaJDY6BuoZtk4iI1hgmmQ2OgbmmbZOIgNo31Rxeg7y4YaG9AXPRWKoxMmzHfpGJ1Anu8SQpfxOs0WYoSTi%2BDc8v7zuPSIHUHb7jJRjJMwQWm4KoODrTQ0wb6LbC7zERYicF4pdiESUaD2LV%2FkcjU6sYnD2mqH2GJ3xADxyevDWjG6zQS14ZxpdLU71ihY57nIHkdYcBMK6MYvSzqWFkiEYhyQEVqHn19Lwu75bbr6ay3zdIR6w8Ar9PYf7PLeL%2BWkY%2F2FEagNujYMW%2B2OTuR6%2FpCIhxF2JYuiG0zdQS9OECNWLr2TS%2B%2BgiajbaeytiBXFaCZQeHeKrcnOAbXy7m6qXk7HEmvgWhqtHNeBfV5zoAgVQ1UsFD2hQIxR0Q%2BFYoyKhaInFNBFMAeK2tqzUGiGAjEqRT8UilEpFoqeUCCGo%2BiHglooBoECMQ5FPxSKcSgWip5QIAag6IdCMQDFQtETCsTIE%2F1QKEaeWCh6QoE4FU8%2FFIrTNC0UPaEw2dGMrKM5CBTEZEczso7mMFBAR%2FOCT1VXVHh0QhGSrz3Q5Le2H%2FC6F40ebJjJJRRIfSeLSykux2eC1pHb3KMDe0jPJdB%2Bu%2BYvT%2BNT2o2aVLsMm2roaV3yJB4j1R5tas2Q4zDcevHURhzG2051IxTbba2UGmGLDS2Y%2BzzNRliG%2BKy9KC221NDYuEz4XC6mqvFcBqgd%2BM26kXQvozWg2tAxuBOL6Vp1qxATxA79FtoeNtqwJ%2F7tBW6NabzQEWlSzbDLEAp7tyfJAy%2FEWamG8xsgt99q9nkBciFCYb%2FxTiQy5iMsRILWou1e%2Fx0HNYkNe473LzxJxtjuC4NW19HHLkgwIzec8OItQw6wyaqnathkWzunt03WJJt0k63LJmvVxc7BE3vJ%2FucewiSjmHEb2pFQHaK3SPRBAjNqQzsSqgP0Fok%2BSGDGbGhHQnV43iLRBwnMiA3tSKgOzlsk%2BiCBGa%2BhHQnVoXmLRB8kMKM1tCOhOjBvkeiBBINulkFIqE40skj0QQJz7pl2JKhFYgAkqMFIUIvEEEiY7F7W51oktCJhsntZ%2B%2FwWCa1IQPfyTmTxDHBh%2Bj5aYOwuwI62YB1rFfH4SWRCMQrABLXDVoytH2GrDQ237%2BvF%2BHbjIxFrDpP66FxDH%2Bt%2BxlXD4wyQmjpeS2rswHEG%2FaEfMz7CXQ%2BLaq9VWmNHWrjQdznlqgFERigdtJTu3hJ4QKU7Jp6MsEos5wI1hI6wC2oXmgTfXle56uJ9RmjdauyF2AH6Lux9%2F84V11s1QGgShe3uCnad6MJO7fdCVsXl303QOmw1P6LuDRgGlBp2Fs94%2FihXY%2BwutsQOsWeduIbsPFMVdE2zprYV%2Bu8u4jaLke7uora9RZp3o9HBdk0rRpXAK%2Bl0a1xDdpzpZkJ5J27LRB8mDNmBu5sJ5R24LRN9mECMI9HPhPLuypaJHkx40NAwiAnFQBLLRD8mECNJtDNRN7MtE3qZoCYzQS0TQzBhyM7a3UwoxpJYJvoxgRhMop8J5V2TLRN9mECcC6efCcW5cJaJfkyY7GO61scchImObcTyTCzzNE7jeK04ys5pNIm9rz2c4LfWwSNOvXs4zmiCB13Ci3gmMhlLXiQXPzuRI1S9HUzJsJcf9KATd8PjPH3g8WuSjJH0sBW5Q0g9yRxHcR%2F6XNflejSl5MqxDiYIHgHBI1zBoYl0Kh%2FlpBJcrufj0zyk7YIFeW9I16cdVShfzopSZbSVqOe1VC9YR1Yd0Qg5odH5mXdYY7YqAJqNWV%2FRMKUtuY%2FfLUk9QGsW3I4d2phlHzz4EM1ZH9EK0U%2BFoj1mqehLBaIZop0KT3EQ1lLRlwpEO0R%2FWUEtFcNQgRjYpb%2BsUAzisVT0pQKaNn%2B%2BTtP5a5zmijPZTNgAnnntDeAJDXC7stCtuY8zuSwZ%2BJHJXC6mI5Q9ALvWMBc5sjzoWLN5FY%2BXdBeQ7mJ3ZetpX80JbnIiR6s6DQHoLva8oIAC1W%2FXq1mWpooumQmCEyi4Vy9xhiQ39GtuZDwTqmuTGyC28xXohkbIaSb4pEi6TZPJCEUHm7R9QkEOfYY%2FBF8pToAzQO3Ihw0VhlucwM572SBfLdNMdZ88E%2BT%2B7OZ40LGGR7Z%2BfFTelPDri00cCtV2cOGGvc2z2WueyRGW2zQCaiOPmgaYS73%2Bwh6slUpNxydQdYfddsndVW7r8nvAzUh9N2XDZ%2B9zD2H3hJhLvepGwrdIDIEE4gQd%2FUgoTtqySPRCAjoI5iBR%2B3wWCa1IYC71qh0J1fgDi0QfJBBDUvQjQS0SAyCBGI%2BiHwnFCVsWiV5IYG5UpR0JxflaFoleSGBuVKUdCcXpWhaJXkhgblSlHQnFVacsEr2QMNq9VI1Xs0j0QCKC7uXdTCZ8UmR6lo5vM3CfgoxysBepjqA9eM5niVQN3vn6aheVEFAbe6A9opBwka8XY5S7A27s5aoj6Gqd8ThXndhmgNoMjrQTiq02NIy%2BrxO5HJ%2FYMPaShNglCbRiboqqMh6f2DBkh2LHFkfQ5DjnhaqJHGGrhMHABoYbRhJBA%2BEuXS5fRye1C0tt5uFKDTvmVyJ7ENn4GiRe0BExjxqwE8Eu77csnilHR319rQMY1MpcTLA9B%2FYlr4qepEyT8ZEddFSRyO0Rz4H9yN%2FTlWqUpQFawxh5Uo%2BBICkN%2B5BA5a%2BwBWclSsM422LS1zgjoNPudYKtyTqDtyO7%2B6maZ%2FSDZx%2FAPvMcQ7br7QJj6%2F1ZMAYAAzOSQzsYtsQYDgzMeA7tYFALxmBgYEZ1aAdDMdDHgqEABmZsh3YwFMN9LBgKYGBGeGgHQzHox4KhAAZmnId2MBRDfywY%2FcEgmHPVtIOhGABkwVAAA3PGmnYwFCcxWjAUwKAmg6E4ldGCoQCGwc7ndqTKgjEAGO6HHKRZPkun6YInF7vU090QVWtYSfyU%2Bb%2FL5H8EXvXxj%2BqsIuOz1%2FfHys%2F1wVXxk3JAWpF2Kctnry6wZfEhSeOnTVJ1Qnnz%2F4g8f72Xf5fPzdd5WiTtHv8mTZfVeQBYQjl%2F8ADcfjVOVl2SOnDcjF56p8FZb763o%2BnNgo%2F07XVnIuG5fBaNO%2FzaWBnpMjj9JK9%2Ba4MM%2F691Wh84Xr2pclKcwJzlzzcJ6uPFX9Py%2Fze%2F%2Feu3f17Vl3vI6vTTiyL5vk4vnnFzp81BeDoENEnkclUy8jKTubhf8jeFXzK%2BbOLYGP0sb3LJ5zIp36trkTyLXMa8mcfsozzmiZwuirS4yGORdYG0PbUDpOY47nbA9e3m1U8rH3ma8YkUuweoXoa9fKksNdRcWNUPumLEaNBRKG4Tf5E16Jl%2BzwQcAR8uf7ve4W1W7Mnf93VdKxcD5sd87yo8GvKM1Q26Ks8C2jtoYZv4i3kG7cxv2ZQv5KooiVRj%2BwzY%2F4I6TcX9%2ForrCV4g0Cb8xp9GpzNzonY7x8dWGvpupzKLZ6PT2nWB1siLVnoUWln3siiis0eRja8QKVrVLcF9F1twaBHdiWxVNoWPyrv6Zbu3VORcPIskXc7FQnExSxPygbXBV6hANeUDdGTu5EIx6s8AqevNFT6N965FiOfj03m7bksldIi8J5pXb4faWMFSrPLFenzlh0tbYkfYYsPe%2BakQI2yi0PCzlYZ907t0mfBsdFITtyW1hztXzKOwS%2FmjULGQYWxSs2alGCJvjOtRxJCTw3c82vpCTdefKA4gH%2B%2BGFiu9j9mgex513JDCvYr6Gv%2FHhH3w%2BENY%2FxT2f09iHqvOtDfgPQya72GA3WZiiIEc%2Bt9DxfF6%2Bx4qvocMdtUNokNx0N7SoUoHNBDMoaMuUi0dQ9FhxF7Z%2B%2BhQnLhk6VClA3Fam346qKVjWDoQ57bpp0NxCpOlQ5UOI%2FbQ3keH4jwmS4cqHUbspb2PDsXJTJYOVTpM9h2p4owmS4cqHYjz3fTTYV3pYelwTfZKqXXDBqbDCK%2BUeZ1x%2Fp4yHaTef6OW13XCQekAN2S7G6rT4Xzw%2BIPQ0QuGHrNX3k9eIZ387KaelBc5eOpJwPyzkxDwSOEwm%2B8%2BPAh69L%2BnpDDX9c77F2R1kXVgQfarU1KKj1lazhrZZXrGl7PbdCLKM%2F4L"></iframe>
+
 </section>
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas</h2>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Referencias</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-breiman2001" class="csl-entry" role="listitem">
+Breiman, Leo. 2001. <span>«Random Forests»</span>. <em>Machine Learning</em> 45 (1): 5-32. <a href="https://doi.org/10.1023/A:1010933404324">https://doi.org/10.1023/A:1010933404324</a>.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas</h2>
 
 <ol>
 <li id="fn1"><p>El más alto de mundo mide 379 pies.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>

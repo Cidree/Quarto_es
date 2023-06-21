@@ -19,11 +19,15 @@ format:
     theme: materia
     title-block-banner: '#000A5F'
     title-block-banner-color: '#81F3D6'
+    execute:
+      echo: false
+    css: styles.css
   pdf: 
     documentclass: scrartcl
     indent: true
 
 editor: visual
+bibliography: references.bib
 ---
 
 # Introducción a la sección 👀
@@ -40,23 +44,39 @@ editor: visual
 
 ## Citas
 
-Los robles 🌳 son árboles pertenecientes al género *Quercus*, dentro de la familia de las Fagáceas. Son considerados una de las especies arbóreas más emblemáticas y ampliamente distribuidas en el hemisferio norte, con una presencia significativa en Europa, América del Norte y Asia Su importancia ecológica y cultural los convierten en objeto de estudio y admiración en diversos campos, como la botánica, la silvicultura y la conservación de la biodiversidad.
+Los robles 🌳 son árboles pertenecientes al género *Quercus*, dentro de la familia de las Fagáceas. Son considerados una de las especies arbóreas más emblemáticas y ampliamente distribuidas en el hemisferio norte, con una presencia significativa en Europa, América del Norte y Asia Su importancia ecológica y cultural los convierten en objeto de estudio y admiración en diversos campos, como la botánica, la silvicultura y la conservación de la biodiversidad [@breiman2001].
 
+::: {.quarto-title-meta-heading .mi-clase}
 Los robles se caracterizan por tener troncos fuertes y rectos , con una corteza rugosa y surcada que se vuelve más gruesa a medida que el árbol envejece. Su altura puede variar dependiendo de la especie y las condiciones de crecimiento, pero en general, los robles alcanzan alturas considerables, llegando a superar los 30 metros en muchas ocasiones[^1]. El diámetro del tronco también puede ser notable, proporcionando estabilidad y resistencia.
+:::
 
 [^1]: El más alto de mundo mide 379 pies.
 
-Las hojas de los robles son caducas 🍂, es decir, se caen durante el otoño. Son alternas y generalmente tienen forma lobulada, aunque esto puede variar ligeramente según la especie. Las hojas son de color verde intenso en la primavera y el verano, pero durante el otoño adquieren tonalidades cálidas y atractivas, como el rojo, el amarillo y el marrón. Estas hojas son una fuente importante de alimento para muchas especies de herbívoros 🦌.
+Las hojas de los robles son caducas 🍂, es decir, se caen durante el otoño. Son alternas y generalmente tienen forma lobulada, aunque esto [puede variar ligeramente]{.mi-clase} según la especie. Las hojas son de color verde intenso en la primavera y el verano, pero durante el otoño adquieren tonalidades cálidas y atractivas, como el rojo, el amarillo y el marrón. Estas hojas son una fuente importante de alimento para muchas especies de herbívoros 🦌.
 
 {{< pagebreak >}}
 
+::: {style="color: darkorange;"}
 Otra característica distintiva de los robles son sus frutos llamados bellotas . Estas semillas, contenidas en pequeñas copas o cupules, maduran en otoño y son dispersadas por el viento o por la acción de animales como ardillas y pájaros. Las bellotas son una fuente de alimento para diversos animales y también tienen una importancia clave en la regeneración de los robles, ya que germinan y dan lugar a nuevos individuos.
+:::
 
-En cuanto a su distribución 🗺️, los robles se encuentran en una amplia gama de hábitats, desde bosques templados y mixtos hasta zonas montañosas y áreas de transición entre diferentes ecosistemas. Cada región alberga diferentes especies de robles adaptadas a las condiciones climáticas y edáficas específicas. Algunas de las especies más conocidas incluyen el roble europeo (*Quercus robur*), el roble americano (*Quercus alba*) y el roble rojo (*Quercus rubra*[^2]).
+En cuanto a su distribución 🗺️, los robles se encuentran en una amplia gama de hábitats, desde bosques templados y mixtos hasta zonas montañosas y áreas de transición entre diferentes ecosistemas. Cada región alberga diferentes especies de robles adaptadas a las condiciones climáticas y edáficas específicas. Algunas de las especies más conocidas incluyen el roble europeo (*Quercus robur*), el roble americano (*Quercus alba*) y el roble rojo (*Quercus rubra*[^2]). El *Q. robur* [@fig-qrobur] es una especie nativa de Europa, que se extiende principalmente por la zona Atlántica y el interior Europeo. En cambio, el *Q. rubra* [@fig-qrubra] es una especie nativa de la zona oriental de Estados Unidos y sureste de Canadá, aunque también se planta para la producción de madera en Europa.
 
 [^2]: Especie nativa de América que se planta en Europa.
 
+```{r}
+#| label: fig-qrobur
+#| fig-cap: "Hoja y fruto de *Quercus robur*"
+knitr::include_graphics('00_figs/qrobur.jpg')
+```
+
 En resumen, los robles son árboles de gran envergadura y longevidad, caracterizados por su tronco robusto, hojas lobuladas y producción de bellotas. Su distribución geográfica abarca varias regiones del hemisferio norte, y su presencia es de gran importancia ecológica y cultural. Estos árboles icónicos merecen nuestra atención y conservación para asegurar su supervivencia y perpetuar su legado en los ecosistemas que habitan.
+
+```{r}
+#| label: fig-qrubra
+#| fig-cap: "Hojas de *Quercus rubra*"
+knitr::include_graphics('00_figs/qrubra.jpg')
+```
 
 ## Shortcode
 
