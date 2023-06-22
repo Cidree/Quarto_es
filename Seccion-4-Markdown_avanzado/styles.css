@@ -19,6 +19,7 @@ p {
   font-size: 16px;
 }
 
+/*
 ul {
   background-color: #F3E2F7;
 }
@@ -26,6 +27,7 @@ ul {
 ol {
   color: darkorange;
 }
+*/
 
 span {
   background-color: yellow;
@@ -85,6 +87,28 @@ ul p:hover,
 .nav-link:hover {
   background-color: #E37545;
 }
+
+
+
+/* Callouts */
+
+.callout {
+  margin: 60px;
+}
+
+
+.callout-warning {
+  background-color: red;
+}
+
+.callout p {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+
+
+
 
 
 
