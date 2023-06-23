@@ -45,7 +45,7 @@ span {
 .quarto-title-meta-heading {
   margin: 20px;
   padding: 20px;
-  background-color: red;
+  background-color: #EBB39B;
 }
 
 /* ID */
@@ -107,14 +107,36 @@ ul p:hover,
 }
 
 
+/* Panel tabset */
+
+.nav-tabs {
+  background-color: #7ADEF1;
+}
+
+/*#tabset-1-2-tab {
+  color: red;
+  font-size: 30px;
+}*/
+
+.nav-link {
+  font-weight: 900;
+}
 
 
+.nav-link:hover {
+  color: darkblue;
+  font-size: 20px;
+}
 
+.nav-link:active {
+  font-size: 30px;
+}
 
-
-
-
-
+.tab-pane {
+  background-color: #EEEEFC;
+  padding: 0.2in;
+  border: 1px solid black;
+}
 
 
 

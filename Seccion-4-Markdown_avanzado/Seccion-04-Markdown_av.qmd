@@ -16,11 +16,12 @@ toccolor: teal
 # Formatos ------------------------------
 format: 
   html:
-    theme: materia
+    theme: lux
     title-block-banner: '#000A5F'
     title-block-banner-color: '#81F3D6'
     execute:
       echo: false
+      warning: false
     css: styles.css
   pdf: 
     documentclass: scrartcl
@@ -43,7 +44,7 @@ bibliography: references.bib
 
 -   Divs de Quarto
 
-## Citas
+## Citas {.unnumbered .unlisted}
 
 Los robles 🌳 son árboles pertenecientes al género *Quercus*, dentro de la familia de las Fagáceas. Son considerados una de las especies arbóreas más emblemáticas y ampliamente distribuidas en el hemisferio norte, con una presencia significativa en Europa, América del Norte y Asia Su importancia ecológica y cultural los convierten en objeto de estudio y admiración en diversos campos, como la botánica, la silvicultura y la conservación de la biodiversidad [@breiman2001].
 
@@ -225,4 +226,60 @@ Finalmente, se pueden utilizar para dar consejos. Por ejemplo, los *callouts* pe
 -   Colapsar el código (**collapse**; solo en HTML)
 
 -   Añadir un título (**title;** o utilizar headings)
+:::
+
+## Panel tabset
+
+Texto ....
+
+::: panel-tabset
+## Frutos
+
+### Bellotas
+
+```{r}
+library(tidyverse)
+data(iris)
+
+iris %>% 
+  filter(Species == "versicolor") %>% 
+  ggplot(aes(x = Petal.Length)) +
+  geom_histogram()
+```
+
+### Cerezas
+
+```{r}
+iris %>% 
+  ggplot(aes(x = Petal.Length, y = Sepal.Length, color = Species)) +
+  geom_point()
+```
+
+## Flores
+
+### Iris Virginica
+
+<div>
+
+Este es el histograma de *Iris virginica.*
+
+</div>
+
+```{r}
+iris %>% 
+  filter(Species == "virginica") %>% 
+  ggplot(aes(x = Petal.Length)) +
+  geom_histogram()
+```
+
+### Iris setosa
+
+Este es el histograma de *Iris setosa.*
+
+```{r}
+iris %>% 
+  filter(Species == "setosa") %>% 
+  ggplot(aes(x = Petal.Length)) +
+  geom_histogram()
+```
 :::
