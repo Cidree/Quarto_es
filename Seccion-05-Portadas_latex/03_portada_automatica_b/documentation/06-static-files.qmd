@@ -1,0 +1,72 @@
+# Static pages
+
+## title page
+
+If you have a static LaTeX title page, you can pass in 
+
+```
+titlepage: your_titlepage.tex
+```
+The file should contain only the TeX for the title page. Its contents will be input as follows
+```
+\begin{titlepage}
+\input{your_titlepage.tex}
+\end{titlepage}
+```
+Note because the `\input{}` call happens after the Pandoc template code is evaluated, this file must be a static tex file with no Pandoc meta variables.
+
+## Cover page
+
+Similarly, if you have a static LaTeX cover page, then pass in 
+
+```
+coverpage: your_coverpage.tex
+```
+The file should contain only the TeX for the title page. Its contents will be input as
+```
+\begin{titlepage}
+\input{your_coverpage.tex}
+\clearpage
+... 
+\end{titlepage}
+```
+
+## Static cover page and title page
+
+In this case, another option is to pass in `none` for `titlepage` and `coverpage` and then pass in `titlepage-include.file`. The format section of your yaml will look like this:
+
+```
+format: 
+  titlepage-pdf:
+    documentclass: scrbook
+    classoption: ["oneside", "open=any"]
+    number-sections: true
+    titlepage: "none"
+    coverpage: "none"
+    titlepage-include-file:
+      - your_coverpage.tex
+      - your_titlepage.tex
+```
+
+## Copyright, dedication and other static pages
+
+You can include the dynamically created title page and cover page along with static pages. In this case the static pages appear after the title page or after the cover page. The [quarto_titlepages repository](https://github.com/nmfs-opensci/quarto_titlepages) has examples of these pages in the `tex` folder. You can include as many raw tex files for your frontmatter as you need.
+
+Here a copyright page appears after the cover page and the dedication and a picture appear after the title page.
+```
+format: 
+  titlepage-pdf:
+    documentclass: scrbook
+    classoption: ["oneside", "open=any"]
+    number-sections: true
+    titlepage: "vline"
+    coverpage: "otter"
+    coverpage-include-file:
+      - tex/copyright.tex
+    titlepage-include-file:
+      - tex/dedication.tex
+      - tex/prettypicture.tex
+```
+
+A `\clearpage` command is issued after each tex file is input. To prevent page numbers, use `\thispagestyle{empty}` in the static tex files.
+
