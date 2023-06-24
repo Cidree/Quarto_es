@@ -1,13 +1,12 @@
 ---
-title: "Incendios en Ferreira de Pantón"
+title: "Incendios forestales en Ferreira de Pantón en 2022"
 author: "Pepe"
+format: pdf
 template-partials: 
   - "00_templates/before-body.tex"
   - "00_templates/_titlepage.tex"
-
 geometry: 
   - margin = 1in
-format: pdf
 editor: visual
 ---
 

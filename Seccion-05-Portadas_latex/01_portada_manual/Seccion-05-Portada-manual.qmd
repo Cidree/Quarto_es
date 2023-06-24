@@ -1,7 +1,6 @@
 ---
-title: ""
+title: "El caso de los incendios forestales en Folgoso do Courel en 2022"
 author: "Adrián Cidre"
-abstract: "En este documento se explican los principios básicos de YAML"
 lang: es
 
 # Tablas de contenidos ---------------
