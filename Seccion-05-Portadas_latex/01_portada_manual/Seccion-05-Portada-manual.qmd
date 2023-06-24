@@ -1,0 +1,221 @@
+---
+title: ""
+author: "Adrián Cidre"
+abstract: "En este documento se explican los principios básicos de YAML"
+lang: es
+
+# Tablas de contenidos ---------------
+toc: true
+toc-title: "Contenidos"
+number-sections: true
+number-depth: 2
+toc-depth: 2
+lof: true             
+lot: true          
+
+# Fuentes ----------------------------
+fontfamily: baskervald   
+fontsize: 12pt
+
+# Colores ---------------------------
+linkcolor: orange
+urlcolor: cyan      
+toccolor: orange      
+
+# Diseño de página -------------------
+geometry: 
+  - margin = 1in
+linestretch: 1.5
+indent: true
+
+# Opciones execute -------------------
+execute: 
+  warning: false
+  echo: false
+
+# Figuras y tablas -------------------
+fig-pos: "tb"
+
+# Referencias ------------------------
+biblio-title: "Bibliografía"
+link-citations: true
+link-bibliography: true
+bibliography: references.bib   
+cite-method: biblatex
+biblio-style: 'authoryear'  
+
+crossref:
+  fig-title: "Fig."
+  fig-prefix: "Fig."
+  eq-prefix: "Eq."
+  sec-prefix: "Sec."
+
+# Parcialas -----------------------
+template-partials: 
+  - "00_templates/before-body.tex"
+  - "00_templates/_titlepage.tex"
+
+# Formato
+format:
+  pdf: 
+    documentclass: scrreprt
+    pdf-engine: xelatex
+---
+
+```{r Paquetes}
+#| code-summary: "Carga de paquetes"
+# Cargar paquetes
+require(pacman)
+p_load(ggplot2, dplyr, knitr, corrplot, caret, nnet, kableExtra, flextable, DT, tidymodels)
+
+# Cambiar estilo ggplot2
+theme_set(theme_bw())
+```
+
+# Introducción
+
+Quarto es un paquete de software que se incluye en el entorno de desarrollo integrado (IDE) RStudio. Este paquete permite a los usuarios crear informes dinámicos y reproducibles utilizando una variedad de lenguajes de programación, incluyendo R, Python y SQL.
+
+Quarto proporciona herramientas para la creación de informes interactivos que pueden incluir gráficos, tablas, imágenes y otros elementos. Además, los informes pueden ser generados en diferentes formatos, como HTML, PDF y Microsoft Word, lo que los hace muy versátiles y fáciles de compartir con otras personas.
+
+Quarto también incluye características avanzadas, como la capacidad de crear informes que se actualizan automáticamente en función de los cambios en los datos subyacentes y la capacidad de colaborar en equipo en la creación de informes.
+
+En resumen, Quarto es un paquete de software muy útil para cualquier persona que trabaje con datos y necesite crear informes dinámicos, reproducibles e interactivos.
+
+En este documento vamos a ver varias de las opciones más básicas para crear un documento académico.
+
+# Dataset de Iris
+
+El dataset de iris consiste en una base de datos de 150 observaciones de flores pertenecientes a las tres especies siguientes:
+
+-   *Iris setosa*
+
+-   *Iris versicolor*
+
+-   *Iris virginica*
+
+Estas especies pueden visualizarse en la @fig-iris.
+
+```{r}
+#| label: fig-iris
+#| fig-cap: "Imágenes de las especies de Iris"
+include_graphics('01_images/iris_pictures.png')
+```
+
+Para cada una de las observaciones se han tomado 5 variables: longitud del pétalo, longitud del sépalo, anchura del pétalo, anchura del sépalo y especie. En las siguientes secciones se va a analizar esta base de datos.
+
+## Análisis descriptivo {#sec-analisis}
+
+En la @fig-histograma podemos ver la distribución de frecuencias de la longitud del pétalo según la especie. En este gráfico vemos que la longitud de los pétalos de *Iris setosa* es mucho menor que de las otras dos especies, siendo *I. virginica* la que tiene una mayor longitud.
+
+```{r}
+#| label: fig-histograma
+#| fig-cap: "Histograma de la longitud del pétalo de 3 especies de Iris"
+# Cargar dataset de iris
+data(iris)
+
+# Generar grafico
+ggplot(iris, aes(x = Petal.Length, fill = Species)) +
+  geom_histogram(alpha = 0.5, position = position_nudge()) +
+  ylab("")
+```
+
+Para evaluar si los cambios eran significativos se utilizó un test ANOVA seguido del *Tukey HSD pos hoc* test utilizando el software R . En la @tbl-anova se muestran los resultados, donde podemos ver que las diferencias entre especies son significativas.
+
+```{r}
+#| label: tbl-anova
+#| tbl-cap: "ANOVA para la longitud del pétalo de 3 especies de Iris"
+# Calculo ANOVA
+anovaIris <- aov(Petal.Length ~ Species, iris)
+
+# Pos hoc test
+tablaAnova <- TukeyHSD(anovaIris)$Species
+
+# Pintar tabla
+kable(data.frame(tablaAnova)) |> 
+  kable_styling(latex_options = "HOLD_position")
+```
+
+Para complementar, se muestra la relación entre cada par de variables mediante *scatterplots* en la @fig-scatter Todas las variables muestran una buena separación de las tres especies, especialmente la especie *I. setosa*.
+
+```{r}
+#| label: fig-scatter
+#| fig-cap: "Scatter plots de las especies de Iris"
+pairs (iris[,-5], pch=19, col=c("blue", "green", "orange")[iris[,5]])
+```
+
+Finalmente, en la @fig-corrplot se muestra la matriz de correlaciones que se ha calculado utilizando el paquete *corrplot* en el software R [@corrplot] . En esta matriz podemos ver que tres de las variables (excepto anchura del sépalo) muestran una alta correlación.
+
+```{r Corrplot}
+#| out-width: "75%"
+#| out-heigth: "75%"
+#| label: fig-corrplot
+#| fig-cap: "Matriz de correlación del dataset iris"
+corrplot(cor(iris[,-5]),
+         method="number",
+         tl.pos= 'd',
+         type = 'upper')
+```
+
+## Modelo de clasificación
+
+Para predecir las especies de *Iris* se propone un modelo en el que solamente se utilizan las medidas de ancho de sépalo y largo de pétalo, ya que como se vio en la @sec-analisis parecen ser las variables más importantes para clasificar las tres especies.
+
+```{r ModeloIris}
+#| results: hide
+# Data split
+set.seed(111)
+mySplit <- createDataPartition(iris$Species, p = 0.7, list = F)
+myTrain <- iris[mySplit,]
+myTest <- iris[-mySplit,]
+
+# Modelo
+myModel <- multinom(Species ~ Petal.Length + Sepal.Width,
+                    data = myTrain,
+                    verbose = F)
+
+# Predicciones
+myTest$Pred <- predict(myModel, myTest,type = 'class')
+
+# Matriz de confusion
+cm <- confusionMatrix(myTest$Species,myTest$Pred)
+```
+
+Para ello, se ha utilizado un modelo de regresión logística multinomial a través del paquete de R *nnet* [@nnet] El modelo tiene una exactitud global de <!--# incluir exactitud global -->. El modelo multinomial ha tenido un error por omisión de *I. versicolor* por *I. virginica* y otro error por omisión de *I. virginica* por *I. versicolor*.
+
+```{r}
+
+```
+
+```{r TablaCM}
+kable(cm$table)
+```
+
+## Modelo de regresión
+
+Finalmente se creó un modelo de regresión para estimar la longitud del pétalo a través de la anchura del sépalo y la anchura del pétalo.
+
+```{r Lm}
+# Modelo lineal
+myLm <- lm(Petal.Length ~ Sepal.Width + Petal.Width, data = myTrain)
+
+# Obtener los coeficientes del modelo
+beta0 <- round(myLm$coefficients[1], 2) # Intercepto
+beta1 <- round(myLm$coefficients[2], 2) # Coeficiente de anchura sepalo
+beta2 <- round(myLm$coefficients[3], 2) # Coeficiente de anchura petalo
+
+# Predict
+myTest$PredLm <- predict(myLm, myTest,type = 'response')
+
+# Evaluacion resultados
+r2 <- R2(myTest$PredLm, myTest$Petal.Length) |> 
+  round(3)
+rmse <- RMSE(myTest$PredLm, myTest$Petal.Length) |> 
+  round(3)
+```
+
+El modelo se entrenó con un 70% de los datos y se evaluó en los datos restantes. Los estadísticos de bondad de ajuste han dado unos excelentes resultados, con un $R^2$ de <!--# incluir variable como código en línea --> y el *rmse* un valor de <!--# ídem -->. La @eq-lm muestra la ecuación de regresión resultante.
+
+$$
+PetalLength = `r beta0` \ + \ `r beta1` \cdot SW \ + \ `r beta2` \cdot PW
+$$ {#eq-lm}

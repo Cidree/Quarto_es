@@ -1,0 +1,28 @@
+$if(has-frontmatter)$
+\begin{frontmatter}
+  
+  \begin{titlepage}
+    $_titlepage.tex()$
+  \end{titlepage}
+  
+  $if(abstract)$
+  \begin{abstract}
+    $abstract$
+  \end{abstract}
+  $endif$
+  
+\end{frontmatter}
+
+$else$
+
+\begin{titlepage}
+  $_titlepage.tex()$
+\end{titlepage}
+  
+$if(abstract)$
+\begin{abstract}
+  $abstract$
+\end{abstract}
+$endif$
+
+$endif$

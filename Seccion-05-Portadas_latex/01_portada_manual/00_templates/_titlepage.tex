@@ -1,0 +1,41 @@
+
+
+
+% Mi portada personalizada
+\centering
+
+
+\begin{titlepage}
+
+
+  \includegraphics[height=2cm]{01_images/llama.png}
+  \hfill
+  \includegraphics[height=2cm]{01_images/arbol.png}
+
+  \vspace{1cm}
+  
+  {\LARGE{Curso de Incendios Forestales}}
+  
+  \vspace{2cm}
+  
+  \textbf{\LARGE Grandes Incendios Forestales de Galicia}
+  
+  \vspace{1cm}
+  
+  \includegraphics[height=10cm]{01_images/incendio.jpg}
+  
+  \vspace{1cm}
+  
+  %{\Huge\textbf{El caso de los incendios en Folgoso do Courel en 2022}}
+  $if(title)${\Huge\textbf{$title$}}$else${\Huge\textbf{INTRODUCIR UN TÍTULO}}$endif$
+  
+  \vfill
+  
+  \begin{tabular}{ r l }
+    \textbf{Autor:} & $if(author)${$author$}$else${\textbf{NOMBRE DEL AUTOR}}$endif$ \\
+    \textbf{Año:} & 2022-2023 \\
+  \end{tabular}
+
+
+
+\end{titlepage}
