@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.340">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Adrián Cidre González">
+<meta name="dcterms.date" content="2023-06-24">
+
+<title>Analysis of summer 2022 wildfires blast in Folgoso do Courel, Spain</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="Seccion-06-Compartir-QP_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Seccion-06-Compartir-QP_files/libs/quarto-html/quarto.js"></script>
+<script src="Seccion-06-Compartir-QP_files/libs/quarto-html/popper.min.js"></script>
+<script src="Seccion-06-Compartir-QP_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Seccion-06-Compartir-QP_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Seccion-06-Compartir-QP_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Seccion-06-Compartir-QP_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Seccion-06-Compartir-QP_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Seccion-06-Compartir-QP_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Seccion-06-Compartir-QP_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="Seccion-06-Compartir-QP_files/libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="Seccion-06-Compartir-QP_files/libs/jquery-1.12.4/jquery.min.js"></script>
+<link href="Seccion-06-Compartir-QP_files/libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="Seccion-06-Compartir-QP_files/libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="Seccion-06-Compartir-QP_files/libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="Seccion-06-Compartir-QP_files/libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="Seccion-06-Compartir-QP_files/libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="Seccion-06-Compartir-QP_files/libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="Seccion-06-Compartir-QP_files/libs/leaflet-binding-2.1.2/leaflet.js"></script>
+<script src="Seccion-06-Compartir-QP_files/libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="Seccion-06-Compartir-QP_files/libs/leaflet-providers-plugin-2.1.2/leaflet-providers-plugin.js"></script>
+<link href="Seccion-06-Compartir-QP_files/libs/HomeButton-0.0.1/home-button.css" rel="stylesheet">
+<script src="Seccion-06-Compartir-QP_files/libs/HomeButton-0.0.1/home-button.js"></script>
+<script src="Seccion-06-Compartir-QP_files/libs/HomeButton-0.0.1/easy-button-src.min.js"></script>
+<script src="Seccion-06-Compartir-QP_files/libs/clipboard-0.0.1/setClipboardText.js"></script>
+<link href="Seccion-06-Compartir-QP_files/libs/mapviewCSS-0.0.1/mapview-popup.css" rel="stylesheet">
+<link href="Seccion-06-Compartir-QP_files/libs/mapviewCSS-0.0.1/mapview.css" rel="stylesheet">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="00_files/style.css">
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-full toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link active" data-scroll-target="#sec-intro"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#sec-matmet" id="toc-sec-matmet" class="nav-link" data-scroll-target="#sec-matmet"><span class="header-section-number">2</span> Materials and Methods</a>
+  <ul class="collapse">
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages"><span class="header-section-number">2.1</span> Packages</a></li>
+  <li><a href="#sec-aoi" id="toc-sec-aoi" class="nav-link" data-scroll-target="#sec-aoi"><span class="header-section-number">2.2</span> Study area</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content column-page-right" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Analysis of summer 2022 wildfires blast in Folgoso do Courel, Spain</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Adrián Cidre González </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 24, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="abstract-title">Abstract</div>
+    Galicia is the northestern region of Spain. Its climate has critical features that make it a particular scenario for wildfires. The very humid conditions of the region combined with the rural Exodus created a continuous forest structure dominated by very flammable species such as <em>Erica</em> spp., <em>Cytisus scoparius</em>, etc. Conversely to what is expected from a humid region, Galicia gathers almost half of the wildfires (in area and number) of Spain. This is explained by the fact that summer is Mediterranean-influenced, and severe droughts can be expected in Galicia, specially in the province of Ourense. The wildfires of summer 2022 will be in the memory of the Galician population, when more than 40,000 ha burned during more than 1 month during July and August. A total of 63 of large forest fires (i.e.&nbsp;greater than 500 ha) were registed in Galicia until the <span class="math inline">\(31^{st}\)</span> of August. Furthermore, the two greatest wildfires of the history of Galicia since we have registers were recorded. One comprises the municipality of Folgoso do Courel, where about 6,400 hectares burned of which the 89% presented moderate to high levels of severity. The spatio-temporal dynamics showed that the northern area (higher in altitude) was typically healthier and humid, resulting in absence of fires, whereas the southern area with unhealthier and less humid vegetation was devastated.
+  </div>
+</div>
+
+</header>
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="00_files/incendio.jpg" class="img-incendio img-fluid figure-img" style="width:15cm"></p>
+</figure>
+</div>
+<section id="sec-intro" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="sec-intro"><span class="header-section-number">1</span> Introduction</h2>
+<p>During the summer of 2022, the region of Galicia was devastated by wildfires, with over 40,000 hectares burned in just July and August. The fire outbreak began with an intense dry storm on the evening of July <span class="math inline">\(15^{th}\)</span>, which brought with it over 6,000 lightning strikes in less than 4 hours. The same week, temperatures in Ourense reached a record high of 44ºC, with similar heat waves reported throughout the province. These extreme weather conditions created the perfect storm for the spread of devastating wildfires.</p>
+<p>The year 2022 was marked by a severe drought, which affected not only the summer months but also late winter and spring, a crucial time for replenishing the trees’ water supply. This shortage of water caused significant stress to the vegetation, which was further exacerbated by the ongoing rural abandonment. With no human intervention, dead biomass accumulated in large quantities, creating dangerous conditions for wildfires. The unusual weather conditions combined with the high amount of fuel available led to an unprecedented number of wildfires, which overwhelmed the firefighting resources and were difficult to contain. The existing firefighting infrastructure was not equipped to handle such a catastrophic situation.</p>
+<p>In this study, I studied how the vegetation stress evolved over time. To relate it, a comparison was made of a relatively normal (average precipitation) year as it was 2021 with 954 registered wildfires and only 4,400 ha burned, against a dry year as 2022 with more than 40,000 ha burned in only 2 months (July and August).</p>
+<p>The aim of this work was to study the spatio-temporal dynamics using vegetation indices derived from remote sensing images. The specific objectives were: (1) to study spatio-temporal dynamics of vegetation statues using the well-known Enhanced Vegetation Index (EVI); (2) to study the spatio-temporal dynamics of vegetation moisture through the Normalized Difference Water Index (NDWI); (3) to define the burned area and its severity.</p>
+<p><br></p>
+</section>
+<section id="sec-matmet" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="sec-matmet"><span class="header-section-number">2</span> Materials and Methods</h2>
+<section id="packages" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="packages"><span class="header-section-number">2.1</span> Packages</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(pacman)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">p_load</span>(sf, here, terra, geodata, tidyverse, ggspatial, mapview, elevatr,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>       rasterVis, tidyterra, cptcity, RColorBrewer, spatialEco, report,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>       lubridate, RStoolbox, flextable, leafpop)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+</section>
+<section id="sec-aoi" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="sec-aoi"><span class="header-section-number">2.2</span> Study area</h3>
+<p>The selected study area is the subregion of Folgoso de Courel (Galicia) which was severely affected by wildfires.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download spanish level 4 boundaries</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>spain <span class="ot">&lt;-</span> <span class="fu">gadm</span>(<span class="at">country =</span> <span class="st">'ESP'</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">level =</span> <span class="dv">4</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">path =</span> <span class="fu">here</span>(<span class="st">'inputs/'</span>),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">resolution =</span> <span class="dv">2</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter study area</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>aoi <span class="ot">&lt;-</span> spain <span class="sc">|&gt;</span> </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(NAME_4 <span class="sc">==</span> <span class="st">'Folgoso do Courel'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In <a href="#fig-aoi">Fig.&nbsp;1</a> we can see the location of the study area. Setting on the <em>Esri.WorldImagery</em> map, we can see that the region is very montanious, and mostly covered by forests.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(aoi,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">viewer.suppress =</span> <span class="fu">mapviewGetOption</span>(<span class="st">"viewer.suppress"</span>),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">color =</span> <span class="st">'red'</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">lwd =</span> <span class="dv">3</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">alpha.regions =</span> <span class="dv">0</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">label =</span> <span class="st">'Folgoso do Courel'</span>,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend =</span> <span class="cn">FALSE</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="fig-aoi" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-2af099fc508f931812c2" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-2af099fc508f931812c2">{"x":{"options":{"minZoom":1,"maxZoom":52,"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"preferCanvas":false,"bounceAtZoomLimits":false,"maxBounds":[[[-90,-370]],[[90,370]]]},"calls":[{"method":"addProviderTiles","args":["CartoDB.Positron","CartoDB.Positron","CartoDB.Positron",{"errorTileUrl":"","noWrap":false,"detectRetina":false,"pane":"tilePane"}]},{"method":"addProviderTiles","args":["CartoDB.DarkMatter","CartoDB.DarkMatter","CartoDB.DarkMatter",{"errorTileUrl":"","noWrap":false,"detectRetina":false,"pane":"tilePane"}]},{"method":"addProviderTiles","args":["OpenStreetMap","OpenStreetMap","OpenStreetMap",{"errorTileUrl":"","noWrap":false,"detectRetina":false,"pane":"tilePane"}]},{"method":"addProviderTiles","args":["Esri.WorldImagery","Esri.WorldImagery","Esri.WorldImagery",{"errorTileUrl":"","noWrap":false,"detectRetina":false,"pane":"tilePane"}]},{"method":"addProviderTiles","args":["OpenTopoMap","OpenTopoMap","OpenTopoMap",{"errorTileUrl":"","noWrap":false,"detectRetina":false,"pane":"tilePane"}]},{"method":"createMapPane","args":["polygon",420]},{"method":"addPolygons","args":[[[[{"lng":[-7.0479,-7.0457,-7.047,-7.0454,-7.05,-7.0442,-7.0347,-7.034,-7.0451,-7.0456,-7.0484,-7.0546,-7.057,-7.0558,-7.0626,-7.07,-7.0661,-7.0698,-7.0732,-7.0736,-7.0706,-7.0717,-7.0752,-7.0861,-7.0932,-7.0995,-7.1057,-7.1082,-7.1152,-7.1196,-7.1277,-7.1331,-7.1441,-7.1558,-7.175,-7.1816,-7.1986,-7.2129,-7.2226,-7.2311,-7.2338,-7.2382,-7.2547,-7.2547,-7.2594,-7.2707,-7.2867,-7.2889,-7.2948,-7.2971,-7.2899,-7.2911,-7.2945,-7.2861,-7.2734,-7.2758,-7.2736,-7.2683,-7.2641,-7.2634,-7.2647,-7.2741,-7.2802,-7.2827,-7.2855,-7.2804,-7.2782,-7.2756,-7.263,-7.2566,-7.2397,-7.2308,-7.2303,-7.2262,-7.2163,-7.1884,-7.1832,-7.1816,-7.1876,-7.1895,-7.1831,-7.1792,-7.1782,-7.1711,-7.1599,-7.153,-7.1415,-7.1356,-7.1289,-7.1285,-7.1226,-7.1221,-7.1232,-7.1267,-7.1313,-7.1316,-7.128,-7.1294,-7.1232,-7.124,-7.1143,-7.106,-7.1037,-7.096,-7.0882,-7.0821,-7.0805,-7.085,-7.0846,-7.0813,-7.0778,-7.0753,-7.0644,-7.0479],"lat":[42.626,42.6222,42.6123,42.6042,42.5979,42.5895,42.5873,42.5841,42.577,42.5743,42.5725,42.5716,42.5643,42.5597,42.5527,42.5594,42.5754,42.5803,42.582,42.5839,42.5865,42.5899,42.5894,42.5932,42.605,42.6057,42.6037,42.6013,42.6016,42.595,42.5949,42.5923,42.5785,42.5795,42.5752,42.563,42.5591,42.5455,42.5406,42.5398,42.5322,42.5301,42.5304,42.529,42.5267,42.5242,42.5299,42.5326,42.5325,42.535,42.5377,42.5429,42.547,42.5497,42.5592,42.5654,42.5647,42.5679,42.5738,42.578,42.5833,42.5943,42.5973,42.6062,42.6081,42.6072,42.6107,42.6102,42.6034,42.6063,42.6369,42.647,42.6515,42.6578,42.6683,42.6778,42.6826,42.6858,42.6872,42.6904,42.6994,42.7008,42.7049,42.7085,42.6973,42.6992,42.6992,42.6938,42.6906,42.6853,42.6817,42.6794,42.6745,42.671,42.6719,42.6694,42.6668,42.664,42.6581,42.6558,42.6536,42.6583,42.6575,42.65,42.6494,42.6468,42.6447,42.639,42.6368,42.6321,42.6328,42.6277,42.6285,42.626]}]]],null,"aoi",{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"pane":"polygon","stroke":true,"color":"#FF0000","weight":3,"opacity":0.9,"fill":true,"fillColor":"#6666FF","fillOpacity":0,"smoothFactor":1,"noClip":false},"<div class='scrollableContainer'><table class=mapview-popup id='popup'><tr class='coord'><td><\/td><th><b>Feature ID&emsp;<\/b><\/th><td>1&emsp;<\/td><\/tr><tr><td>1<\/td><th>GID_4&emsp;<\/th><td>ESP.12.2.1.5_1&emsp;<\/td><\/tr><tr><td>2<\/td><th>GID_0&emsp;<\/th><td>ESP&emsp;<\/td><\/tr><tr><td>3<\/td><th>COUNTRY&emsp;<\/th><td>Spain&emsp;<\/td><\/tr><tr><td>4<\/td><th>GID_1&emsp;<\/th><td>ESP.12_1&emsp;<\/td><\/tr><tr><td>5<\/td><th>NAME_1&emsp;<\/th><td>Galicia&emsp;<\/td><\/tr><tr><td>6<\/td><th>GID_2&emsp;<\/th><td>ESP.12.2_1&emsp;<\/td><\/tr><tr><td>7<\/td><th>NAME_2&emsp;<\/th><td>Lugo&emsp;<\/td><\/tr><tr><td>8<\/td><th>GID_3&emsp;<\/th><td>ESP.12.2.1_1&emsp;<\/td><\/tr><tr><td>9<\/td><th>NAME_3&emsp;<\/th><td>n.a. (169)&emsp;<\/td><\/tr><tr><td>10<\/td><th>NAME_4&emsp;<\/th><td>Folgoso do Courel&emsp;<\/td><\/tr><tr><td>11<\/td><th>VARNAME_4&emsp;<\/th><td>Folgoso de Caurel&emsp;<\/td><\/tr><tr><td>12<\/td><th>TYPE_4&emsp;<\/th><td>Municipality&emsp;<\/td><\/tr><tr><td>13<\/td><th>ENGTYPE_4&emsp;<\/th><td>Municipality&emsp;<\/td><\/tr><tr><td>14<\/td><th>CC_4&emsp;<\/th><td>NA&emsp;<\/td><\/tr><tr><td>15<\/td><th>geometry&emsp;<\/th><td>sfc_POLYGON&emsp;<\/td><\/tr><\/table><\/div>",{"maxWidth":800,"minWidth":50,"autoPan":true,"keepInView":false,"closeButton":true,"closeOnClick":true,"className":""},"Folgoso do Courel",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},{"stroke":true,"weight":5,"opacity":0.9,"fillOpacity":0,"bringToFront":false,"sendToBack":false}]},{"method":"addScaleBar","args":[{"maxWidth":100,"metric":true,"imperial":true,"updateWhenIdle":true,"position":"bottomleft"}]},{"method":"addHomeButton","args":[-7.2971,42.5242,-7.034,42.7085,true,"aoi","Zoom to aoi","<strong> aoi <\/strong>","bottomright"]},{"method":"addLayersControl","args":[["CartoDB.Positron","CartoDB.DarkMatter","OpenStreetMap","Esri.WorldImagery","OpenTopoMap"],"aoi",{"collapsed":true,"autoZIndex":true,"position":"topleft"}]}],"limits":{"lat":[42.5242,42.7085],"lng":[-7.2971,-7.034]},"fitBounds":[42.5242,-7.2971,42.7085,-7.034,[]]},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      if( strip !==null) strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null},{"code":"function(el, x, data) {\n  return (function(el,x,data){\n           var map = this;\n\n           map.on('keypress', function(e) {\n               console.log(e.originalEvent.code);\n               var key = e.originalEvent.code;\n               if (key === 'KeyE') {\n                   var bb = this.getBounds();\n                   var txt = JSON.stringify(bb);\n                   console.log(txt);\n\n                   setClipboardText('\\'' + txt + '\\'');\n               }\n           })\n        }).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+<figcaption class="figure-caption">Fig.&nbsp;1: Location of the study area (Folgoso do Courel, Galicia)</figcaption>
+</figure>
+</div>
+</div>
+<p><br></p>
+<p>We can illustrate this by plotting the slope of the study area. To do so, we can download the DEM with the next chnuk of code, and compute the slope with the <code>terra::terrain()</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download the DEM</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>dem <span class="ot">&lt;-</span> <span class="fu">get_elev_raster</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">locations =</span> aoi,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">z =</span> <span class="dv">14</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">clip =</span> <span class="st">"bbox"</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rast</span>()</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the slope</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>slope <span class="ot">&lt;-</span> <span class="fu">terrain</span>(dem, <span class="at">v =</span> <span class="st">'slope'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Next, a graphical representation of the DEM and the slope is presented in <a href="#fig-dem">Fig.&nbsp;2</a> and <a href="#fig-slope">Fig.&nbsp;3</a>, respectively.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>pal <span class="ot">&lt;-</span> <span class="fu">brewer.pal</span>(<span class="at">n =</span> <span class="dv">10</span>, <span class="at">name =</span> <span class="st">'RdYlBu'</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dem, <span class="at">col =</span> pal, <span class="at">main =</span> <span class="st">'DEM'</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(slope, <span class="at">col =</span> pal, <span class="at">main =</span> <span class="st">'Slope'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">DEM</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Slope</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-dem" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Seccion-06-Compartir-QP_files/figure-html/fig-dem-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Fig.&nbsp;2: Representation of the DEM in the bounding box the study area (Folgoso do Courel, Galicia, Spain)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-slope" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Seccion-06-Compartir-QP_files/figure-html/fig-slope-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Fig.&nbsp;3: Representation of the slope in the bounding box the study area (Folgoso do Courel, Galicia, Spain).</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

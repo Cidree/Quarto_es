@@ -204,9 +204,6 @@ cm <- confusionMatrix(myTest$Species,myTest$Pred)
 
 Para ello, se ha utilizado un modelo de regresión logística multinomial a través del paquete de R *nnet* [@nnet] El modelo tiene una exactitud global de <!--# incluir exactitud global -->. El modelo multinomial ha tenido un error por omisión de *I. versicolor* por *I. virginica* y otro error por omisión de *I. virginica* por *I. versicolor*.
 
-```{r}
-
-```
 
 ```{r TablaCM}
 kable(cm$table)

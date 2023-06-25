@@ -1,0 +1,94 @@
+/* body  ################################################ */
+
+body {
+  margin: auto;
+}
+
+/* parrafos  ################################################ */
+p {
+  text-align: justify;
+  font-family: Helvetica;
+}
+
+/* encabezado  ################################################ */
+
+.quarto-title-meta-heading{
+  text-align: center;
+}
+
+.quarto-title-meta-contents{
+  text-align-last: center;
+}
+
+header {
+  background-color: #DAECD6;
+  padding: 0.2in;
+  border: 1px solid black;
+}
+
+.title {
+  color: darkblue;
+  font-weight: bold;
+  font-size: 26pt;
+  text-align: center;
+}
+
+.abstract-title{
+  text-align: center;
+}
+
+.abstract{
+  text-align: justify;
+}
+
+/* figuras ################################################ */
+
+.figure-caption{
+  text-align: center;
+  
+}
+
+.img-incendio {
+  padding: 50px;
+  border: 5px solid red;
+  background-color: black;
+}
+
+/* hyperlinks ################################################ */
+
+a:visited {
+  color: #EFF3EE;
+}
+
+/* Classes ################################################ */
+
+.cuadros {
+  background-color: #E9F4E6;
+  border: 2px solid;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 30px 30px 30px 30px;
+}
+
+/* Titles  ################################################ */
+
+h2 {
+  font-size: 22pt;
+  font-weight: bold;
+  color: darkblue;
+}
+
+h3 {
+  font-size: 18pt;
+  font-weight: bold;
+  color: darkblue;
+}
+
+/* navlink ################################################ */
+
+.nav-link:hover {
+  font-size: 20px;
+  color: darkblue;
+  font-weight: 900;
+}
+

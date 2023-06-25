@@ -1,0 +1,4 @@
+- source: Seccion-06-Compartir-QP.qmd
+  quarto-pub:
+    - id: 5df35487-e468-4dc6-a462-4bb3cb1e42b3
+      url: 'https://cidree.quarto.pub/incendios-courel'
