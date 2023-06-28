@@ -1,0 +1,70 @@
+---
+title: "Enlaces útiles"
+author: "Adrián Cidre"
+date: "`r format(Sys.time(), '%d %b %y')`"
+lang: es
+format: 
+  pdf: default
+  html: default
+indenting: yes
+execute: 
+  echo: true
+---
+
+# Enlaces
+
+## Sección 2
+
+Cheat sheet RMarkdown.
+
+## Sección 3
+
+-   Opciones de `html`: [https://quarto.org/docs/reference/formats/html.html](https://quarto.org/docs/reference/formats/html.html#title-author)
+
+-   Opciones de `pdf`: <https://quarto.org/docs/reference/formats/pdf.html>
+
+-   Opciones de **date-format:** <https://quarto.org/docs/reference/dates.html>
+
+-   Opciones de **fontfamily**: <https://tug.org/FontCatalogue/>
+
+-   Colores disponibles para la sección de colores de YAML: <https://ctan.org/pkg/xcolor>
+
+-   Opciones de **classoption**: <https://texblog.org/2013/02/13/latex-documentclass-options-illustrated>
+
+-   Ver las fuentes disponibles en el sistema:
+
+```{r}
+#| eval: false
+systemfonts::system_fonts()
+```
+
+-   HTML themes: <https://quarto.org/docs/output-formats/html-themes.html>
+-   Opciones de **biblio-style:** <https://es.overleaf.com/learn/latex/Biblatex_bibliography_styles>
+
+## Sección 4
+
+-   Código hexadecimal de colores: <https://htmlcolorcodes.com/>
+
+-   Extensión fontawesome: <https://github.com/quarto-ext/fontawesome>
+
+-   Página oficial de Mermaid: <https://mermaid.js.org>
+
+-   Diagrams online: <https://www.drawio.com/>
+
+-   Introducción a CSS: <https://uniwebsidad.com/libros/css>
+
+## Sección 5
+
+Partials: <https://github.com/quarto-dev/quarto-cli/tree/main/src/resources/formats/pdf/pandoc>
+
+Extensión titlepages: <https://nmfs-opensci.github.io/quarto_titlepages/>
+
+## Sección 6
+
+Publicar en Quarto: <https://quarto.org/docs/publishing/>
+
+# Keyboard shortcuts
+
+-   Introducir bloque de código {{< kbd Ctrl+Alt+I >}}
+
+-   Autocompletado en YAML o bloque de cógido: {{< kbd Ctrl+SPACEBAR >}}
